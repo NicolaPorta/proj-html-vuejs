@@ -1,0 +1,29 @@
+header {
+    background-color: $backHeaderColor;
+    padding: $wrapper;
+    .top {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 0;
+        .download {
+            font-size: 12px;
+            a {
+                padding: 0 13px;
+                @include commonText;
+                span {
+                    margin-left: 3px;
+                    @include buttonsStyle;
+                    padding: 0 5px;
+                    font-size: 10px;
+                }
+            }
+        }
+        .icons {
+            font-size: 16px;
+            i {
+                padding: 0 15px;
+                color: $socialIconsColor;
+            }
+        }
+    }
+}

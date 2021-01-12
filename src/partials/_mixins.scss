@@ -1,0 +1,15 @@
+@mixin commonText {
+    font-family: 'Catamaran', sans-serif;
+    color: #383b39;
+}
+
+@mixin titleText  {
+    font-family: 'Vidaloka', sans-serif;
+    color: #272628;
+}
+
+@mixin buttonsStyle {
+    border-radius: 8%;
+    background-color: $orangeBrand;
+    color: $backHeaderColor;
+}

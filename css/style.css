@@ -1,1 +1,51 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
+body {
+  font-family: "Catamaran", sans-serif;
+  color: #383b39;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+header {
+  background-color: white;
+  padding: 0 10%;
+}
+header .top {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+header .top .download {
+  font-size: 12px;
+}
+header .top .download a {
+  padding: 0 13px;
+  font-family: "Catamaran", sans-serif;
+  color: #383b39;
+}
+header .top .download a span {
+  margin-left: 3px;
+  border-radius: 8%;
+  background-color: #FC7625;
+  color: white;
+  padding: 0 5px;
+  font-size: 10px;
+}
+header .top .icons {
+  font-size: 16px;
+}
+header .top .icons i {
+  padding: 0 15px;
+  color: #939697;
+}
