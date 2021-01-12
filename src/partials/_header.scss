@@ -1,6 +1,7 @@
 header {
     background-color: $backHeaderColor;
     padding: $wrapper;
+    // TOP
     .top {
         display: flex;
         justify-content: space-between;
@@ -25,5 +26,10 @@ header {
                 color: $socialIconsColor;
             }
         }
+    }
+    // LOGO
+    .logo {
+        margin: auto;
+        display: block;
     }
 }
