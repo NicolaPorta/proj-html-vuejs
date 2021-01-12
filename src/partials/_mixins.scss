@@ -9,7 +9,17 @@
 }
 
 @mixin buttonsStyle {
-    border-radius: 8%;
+    border-radius: 8px;
     background-color: $orangeBrand;
     color: $backHeaderColor;
+    font-family: 'Catamaran', sans-serif;
+}
+
+@mixin lines {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 37%;
+    height: 50%;
+    border-top: 1px dotted #bcbcbd;
 }

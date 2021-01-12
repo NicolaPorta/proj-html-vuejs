@@ -1,0 +1,26 @@
+nav {
+    width: 100%;
+    background-color: $backHeaderColor;
+    text-align: center;
+    position: sticky;
+    z-index: 1;
+    right: 0;
+    top: 0;
+    ul {
+        display: inline-block;
+        li {
+            display: inline-block;
+            padding: 15px 0;
+            a {
+                font-weight: 600;
+                @include commonText;
+                margin: 0 30px;
+            }
+        }
+    }
+    i {
+        margin-left: 30px;
+    }
+    
+    
+}
