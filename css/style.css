@@ -18,6 +18,7 @@ ul {
 }
 
 .layover {
+  padding: 25px;
   position: absolute;
   width: 100%;
   height: 100%;
@@ -26,10 +27,29 @@ ul {
   background-image: linear-gradient(rgba(148, 40, 40, 0.8), #fc7524);
   opacity: 0;
   transition: all 0.5s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .layover:hover {
   cursor: pointer;
   opacity: 1;
+}
+.layover i {
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  color: #515552;
+  background-color: white;
+  margin-bottom: 10px;
+}
+.layover h3 {
+  font-family: "Vidaloka", sans-serif;
+  color: #272628;
+  color: white;
+  font-weight: 500;
 }
 
 .photo {
@@ -610,4 +630,73 @@ section.bottom-imgs ul li {
 }
 section.bottom-imgs ul li a img {
   width: 100%;
+}
+
+footer {
+  padding: 0 10%;
+}
+footer .top {
+  padding: 70px 0;
+  display: flex;
+}
+footer .top > div {
+  width: 25%;
+  padding: 5px 50px;
+}
+footer .top > div:not(:first-child) {
+  border-left: 1px dashed #ddd8d3;
+}
+footer .top .logo {
+  padding-left: 0;
+}
+footer .top .logo img {
+  margin-bottom: 40px;
+}
+footer .top .logo ul {
+  display: flex;
+}
+footer .top .logo ul a {
+  color: #939697;
+  margin-right: 25px;
+  font-size: 18px;
+}
+footer .top .nav li {
+  padding: 10px 0;
+}
+footer .top .nav li a {
+  font-family: "Catamaran", sans-serif;
+  color: #383b39;
+  font-weight: 600;
+  font-size: 18px;
+}
+footer .top .contact i {
+  color: #939697;
+  margin-right: 15px;
+  vertical-align: bottom;
+  padding-top: 5px;
+  font-size: 18px;
+}
+footer .top .contact h3 {
+  color: #FC7625;
+}
+footer .top .contact div {
+  margin-top: 20px;
+  display: flex;
+}
+footer .top .contact div a {
+  font-family: "Catamaran", sans-serif;
+  color: #383b39;
+}
+footer .top .getApp h3 {
+  color: #FC7625;
+  margin-bottom: 20px;
+}
+footer .top .getApp img {
+  display: block;
+  margin-top: 15px;
+}
+footer .bottom {
+  text-align: center;
+  font-size: 12px;
+  padding-bottom: 25px;
 }

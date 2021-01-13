@@ -1,0 +1,74 @@
+footer {
+    padding: $wrapper;
+    .top {
+        padding: 70px 0;
+        display: flex;
+        & > div {
+            width: 25%;
+            padding: 5px 50px;
+            &:not(:first-child) {
+                border-left: 1px dashed darken($mainColor, 5%);
+            }
+        }
+        .logo {
+            padding-left: 0;
+            img {
+                margin-bottom: 40px;
+            }
+            ul {
+                display: flex;
+                a {
+                    color: $socialIconsColor;
+                    margin-right: 25px;
+                    font-size: 18px;
+                }
+            }
+        }
+        .nav {
+            li {
+                padding: 10px 0;
+                a {
+                    @include commonText;
+                    font-weight: 600;
+                    font-size: 18px;
+                }
+            }
+            
+        }
+        .contact {
+            i {
+                color: $socialIconsColor;
+                margin-right: 15px;
+                vertical-align: bottom;
+                padding-top: 5px;
+                font-size: 18px;
+            }
+            h3 {
+                color: $orangeBrand;
+            }
+            div {
+                margin-top: 20px;
+                display: flex;
+                a {
+                    @include commonText;
+                }
+            }
+
+        }
+        .getApp {
+            h3 {
+                color: $orangeBrand;
+                margin-bottom: 20px;
+            }
+            img {
+                display: block;
+                margin-top: 15px;
+            }
+        }    
+    }
+    .bottom {
+        text-align: center;
+        font-size: 12px;
+        padding-bottom: 25px;
+    }
+}
