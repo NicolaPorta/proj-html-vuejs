@@ -221,7 +221,7 @@ main section.popular-recipes .images .bigBanner .text p {
   margin: 25px 0;
   border-top: 1px dotted #bcbcbd;
 }
-main section.popular-recipes .images .bigBanner .text .btn {
+main section.popular-recipes .images .bigBanner .btn {
   border-radius: 2px;
   background-color: #FC7625;
   color: white;
@@ -269,4 +269,142 @@ main section.culinary-collection .types .cards img:hover {
   width: 106px;
   height: 106px;
   cursor: pointer;
+}
+main section.farm-to-table .top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 50px;
+}
+main section.farm-to-table .top .text {
+  text-align: left;
+  max-width: 525px;
+}
+main section.farm-to-table .top a {
+  border-radius: 2px;
+  background-color: #FC7625;
+  color: white;
+  font-family: "Catamaran", sans-serif;
+  padding: 10px 25px;
+  font-size: 14px;
+}
+main section.farm-to-table .central {
+  display: flex;
+  justify-content: space-between;
+}
+main section.farm-to-table .central .main {
+  width: 768px;
+}
+main section.farm-to-table .central .main .bigBanner {
+  background-color: white;
+  text-align: left;
+  padding-bottom: 40px;
+}
+main section.farm-to-table .central .main .bigBanner .text {
+  padding: 10px 30px;
+}
+main section.farm-to-table .central .main .bigBanner .text p {
+  padding-top: 25px;
+  margin: 25px 0;
+  border-top: 1px dotted #bcbcbd;
+}
+main section.farm-to-table .central .main .bigBanner h3 {
+  font-family: "Vidaloka", sans-serif;
+  color: #272628;
+  margin-top: 40px;
+}
+main section.farm-to-table .central .main .bigBanner a {
+  font-size: 14px;
+  font-family: "Catamaran", sans-serif;
+  color: #383b39;
+}
+main section.farm-to-table .central .main .bigBanner i {
+  vertical-align: middle;
+}
+main section.farm-to-table .central .main .bigBanner .right {
+  float: right;
+}
+main section.farm-to-table .central .main .bottom {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+main section.farm-to-table .central .main .bottom .smallBanner {
+  margin: 20px 0;
+  width: 362px;
+  background-color: white;
+  padding-bottom: 25px;
+}
+main section.farm-to-table .central .main .bottom .smallBanner h3 {
+  margin-top: 20px;
+  font-family: "Vidaloka", sans-serif;
+  color: #272628;
+}
+main section.farm-to-table .central .main .more {
+  font-weight: 600;
+  background-color: #ddd8d3;
+  padding: 8px 0;
+  font-size: 17px;
+}
+main section.farm-to-table .central .aside {
+  width: 372px;
+}
+main section.farm-to-table .central .aside .recipe {
+  background-image: url("../img/ad-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 420px;
+  display: flex;
+}
+main section.farm-to-table .central .aside .recipe h3 {
+  width: 110px;
+  margin: auto;
+  font-weight: 600;
+}
+main section.farm-to-table .central .aside .city-guide {
+  margin: 50px 0;
+  position: relative;
+}
+main section.farm-to-table .central .aside .city-guide div {
+  font-size: 14px;
+  border-radius: 2px;
+  background-color: #FC7625;
+  color: white;
+  font-family: "Catamaran", sans-serif;
+  padding: 10px 0;
+}
+main section.farm-to-table .central .aside .city-guide div i {
+  padding: 0 5px;
+}
+main section.farm-to-table .central .aside .city-guide span {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  padding: 10px 20px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  font-size: 21px;
+}
+main section.farm-to-table .central .aside hr {
+  color: #939697;
+}
+main section.farm-to-table .central .aside .search {
+  margin-top: 50px;
+  color: #939697;
+  border-radius: 5px;
+  border: 1px solid #939697;
+  background-color: white;
+  text-align: left;
+  padding: 10px 20px;
+}
+main section.farm-to-table .central .aside .search i {
+  cursor: pointer;
+}
+main section.farm-to-table .central .aside .search input {
+  border: none;
+  outline: none;
+  font-family: "Catamaran", sans-serif;
+  vertical-align: middle;
+  margin-left: 20px;
 }
