@@ -182,7 +182,7 @@ main {
                     }
                 }
                 .city-guide {
-                    margin: 50px 0;
+                    margin: 40px 0;
                     position: relative;
                     div {
                         text-align: center;
@@ -207,7 +207,7 @@ main {
                     color: $socialIconsColor;
                 }
                 .search {
-                    margin-top: 50px;
+                    margin-top: 40px;
                     color: $socialIconsColor;
                     border-radius: 5px;
                     border: 1px solid $socialIconsColor;
@@ -225,7 +225,7 @@ main {
                     }
                 }
                 .social {
-                    margin-top: 50px;
+                    margin-top: 40px;
                     h4 {
                         @include titleText;
                         color: $orangeBrand;
@@ -249,7 +249,7 @@ main {
                     }
                 }
                 .category {
-                    margin-top: 60px;
+                    margin-top: 40px;
                     display: flex;
                     span {
                         width: 50%;
@@ -264,7 +264,7 @@ main {
                     }
                 }
                 .bannerLinks {
-                    margin-top: 45px;
+                    margin-top: 40px;
                     li {
                         display: flex;
                         align-items: center;
@@ -287,9 +287,14 @@ main {
                 }
                 .tweets {
                     background-color: $backHeaderColor;
-                    padding: 20px 20px;
+                    padding: 10px;
                     border-radius: 5px;
+                    a {
+                        color: $TweetlinkColor;
+                    }
                     .top {
+                        padding: 10px;
+                        padding-bottom: 0;
                         display: flex;
                         align-items: center;
                         justify-content: space-between;
@@ -304,30 +309,50 @@ main {
                                 font-weight: 500;
                                 color: black;
                             }
-                            a {
-                                color: $TweetlinkColor;
-                            }
                         }
                     }
                     .tweet-body {
                         display: flex;
+                        padding: 15px;
                         img {
                             width: 32px;
                             height: 32px;
                         }
                         .tweet {
+                            padding-left: 5px;
                             .user {
                                 display: flex;
                                 justify-content: space-between;
                                 align-items: center;
-                                width: 300px;
-                                padding-left: 5px;
+                                width: 290px;
                                 h4 {
                                     color: black;
                                 }
                                 i {
                                     color: $mainColor;
                                 }
+                            }
+                            p {
+                                font-size: 14px;
+                                line-height: 20px;
+                            }
+                            
+                        }
+                        .tweet-img {
+                            width: 290px;
+                            height: 175px;
+                            border-radius: 5px;
+                            margin-top: 25px;
+                        }
+                        .icons {
+                            margin-top: 10px;
+                            font-size: 14px;
+                            color: $socialIconsColor;
+                            i {
+                                margin-right: 20px;
+                            }
+                            span {
+                                float: right;
                             }
                         }
                     }

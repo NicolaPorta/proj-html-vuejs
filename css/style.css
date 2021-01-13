@@ -365,7 +365,7 @@ main section.farm-to-table .central .aside .recipe h3 {
   text-align: center;
 }
 main section.farm-to-table .central .aside .city-guide {
-  margin: 50px 0;
+  margin: 40px 0;
   position: relative;
 }
 main section.farm-to-table .central .aside .city-guide div {
@@ -393,7 +393,7 @@ main section.farm-to-table .central .aside hr {
   color: #939697;
 }
 main section.farm-to-table .central .aside .search {
-  margin-top: 50px;
+  margin-top: 40px;
   color: #939697;
   border-radius: 5px;
   border: 1px solid #939697;
@@ -411,7 +411,7 @@ main section.farm-to-table .central .aside .search input {
   margin-left: 20px;
 }
 main section.farm-to-table .central .aside .social {
-  margin-top: 50px;
+  margin-top: 40px;
 }
 main section.farm-to-table .central .aside .social h4 {
   font-family: "Vidaloka", sans-serif;
@@ -436,7 +436,7 @@ main section.farm-to-table .central .aside .social ul li a {
   color: #6a6b6c;
 }
 main section.farm-to-table .central .aside .category {
-  margin-top: 60px;
+  margin-top: 40px;
   display: flex;
 }
 main section.farm-to-table .central .aside .category span {
@@ -452,7 +452,7 @@ main section.farm-to-table .central .aside .category span:first-child {
   background-color: white;
 }
 main section.farm-to-table .central .aside .bannerLinks {
-  margin-top: 45px;
+  margin-top: 40px;
 }
 main section.farm-to-table .central .aside .bannerLinks li {
   display: flex;
@@ -474,10 +474,15 @@ main section.farm-to-table .central .aside .bannerLinks li span {
 }
 main section.farm-to-table .central .aside .tweets {
   background-color: white;
-  padding: 20px 20px;
+  padding: 10px;
   border-radius: 5px;
 }
+main section.farm-to-table .central .aside .tweets a {
+  color: #2b7bb9;
+}
 main section.farm-to-table .central .aside .tweets .top {
+  padding: 10px;
+  padding-bottom: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -492,26 +497,47 @@ main section.farm-to-table .central .aside .tweets .top .title h3 {
   font-weight: 500;
   color: black;
 }
-main section.farm-to-table .central .aside .tweets .top .title a {
-  color: #0492ad;
-}
 main section.farm-to-table .central .aside .tweets .tweet-body {
   display: flex;
+  padding: 15px;
 }
 main section.farm-to-table .central .aside .tweets .tweet-body img {
   width: 32px;
   height: 32px;
 }
+main section.farm-to-table .central .aside .tweets .tweet-body .tweet {
+  padding-left: 5px;
+}
 main section.farm-to-table .central .aside .tweets .tweet-body .tweet .user {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 300px;
-  padding-left: 5px;
+  width: 290px;
 }
 main section.farm-to-table .central .aside .tweets .tweet-body .tweet .user h4 {
   color: black;
 }
 main section.farm-to-table .central .aside .tweets .tweet-body .tweet .user i {
   color: #e8e5e1;
+}
+main section.farm-to-table .central .aside .tweets .tweet-body .tweet p {
+  font-size: 14px;
+  line-height: 20px;
+}
+main section.farm-to-table .central .aside .tweets .tweet-body .tweet-img {
+  width: 290px;
+  height: 175px;
+  border-radius: 5px;
+  margin-top: 25px;
+}
+main section.farm-to-table .central .aside .tweets .tweet-body .icons {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #939697;
+}
+main section.farm-to-table .central .aside .tweets .tweet-body .icons i {
+  margin-right: 20px;
+}
+main section.farm-to-table .central .aside .tweets .tweet-body .icons span {
+  float: right;
 }
