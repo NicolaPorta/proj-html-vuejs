@@ -37,3 +37,9 @@
         }
     }
 }
+
+@mixin inputStyle {
+    border: none;
+    outline: none;
+    font-family: 'Catamaran', sans-serif;
+}
