@@ -280,7 +280,7 @@ main section.farm-to-table .top .text {
   text-align: left;
   max-width: 525px;
 }
-main section.farm-to-table .top a {
+main section.farm-to-table .top > a {
   border-radius: 2px;
   background-color: #FC7625;
   color: white;
@@ -471,4 +471,47 @@ main section.farm-to-table .central .aside .bannerLinks li h4 {
 }
 main section.farm-to-table .central .aside .bannerLinks li span {
   font-size: 14px;
+}
+main section.farm-to-table .central .aside .tweets {
+  background-color: white;
+  padding: 20px 20px;
+  border-radius: 5px;
+}
+main section.farm-to-table .central .aside .tweets .top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 14px;
+}
+main section.farm-to-table .central .aside .tweets .top i {
+  color: #939697;
+}
+main section.farm-to-table .central .aside .tweets .top .title h3 {
+  display: inline-block;
+  font-size: 21px;
+  font-weight: 500;
+  color: black;
+}
+main section.farm-to-table .central .aside .tweets .top .title a {
+  color: #0492ad;
+}
+main section.farm-to-table .central .aside .tweets .tweet-body {
+  display: flex;
+}
+main section.farm-to-table .central .aside .tweets .tweet-body img {
+  width: 32px;
+  height: 32px;
+}
+main section.farm-to-table .central .aside .tweets .tweet-body .tweet .user {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 300px;
+  padding-left: 5px;
+}
+main section.farm-to-table .central .aside .tweets .tweet-body .tweet .user h4 {
+  color: black;
+}
+main section.farm-to-table .central .aside .tweets .tweet-body .tweet .user i {
+  color: #e8e5e1;
 }

@@ -111,7 +111,7 @@ main {
                 text-align: left;
                 max-width: 525px;
             }
-            a {
+            & > a {
                 @include buttonsStyle;
                 padding: 10px 25px;
                 font-size: 14px;
@@ -281,6 +281,54 @@ main {
                         }
                         span {
                             font-size: 14px;
+                        }
+                    }
+                    
+                }
+                .tweets {
+                    background-color: $backHeaderColor;
+                    padding: 20px 20px;
+                    border-radius: 5px;
+                    .top {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        font-size: 14px;
+                        i {
+                            color: $socialIconsColor;
+                        }
+                        .title {
+                            h3 {
+                                display: inline-block;
+                                font-size: 21px;
+                                font-weight: 500;
+                                color: black;
+                            }
+                            a {
+                                color: $TweetlinkColor;
+                            }
+                        }
+                    }
+                    .tweet-body {
+                        display: flex;
+                        img {
+                            width: 32px;
+                            height: 32px;
+                        }
+                        .tweet {
+                            .user {
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: center;
+                                width: 300px;
+                                padding-left: 5px;
+                                h4 {
+                                    color: black;
+                                }
+                                i {
+                                    color: $mainColor;
+                                }
+                            }
                         }
                     }
                     
