@@ -116,6 +116,9 @@ main {
                 @include buttonsStyle;
                 padding: 10px 25px;
                 font-size: 14px;
+                i {
+                    margin-left: 5px;
+                }
 
             }
         }
