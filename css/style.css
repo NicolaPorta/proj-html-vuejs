@@ -349,6 +349,7 @@ main section.farm-to-table .central .main .more {
 }
 main section.farm-to-table .central .aside {
   width: 372px;
+  text-align: left;
 }
 main section.farm-to-table .central .aside .recipe {
   background-image: url("../img/ad-bg.jpg");
@@ -361,12 +362,14 @@ main section.farm-to-table .central .aside .recipe h3 {
   width: 110px;
   margin: auto;
   font-weight: 600;
+  text-align: center;
 }
 main section.farm-to-table .central .aside .city-guide {
   margin: 50px 0;
   position: relative;
 }
 main section.farm-to-table .central .aside .city-guide div {
+  text-align: center;
   font-size: 14px;
   border-radius: 2px;
   background-color: #FC7625;
@@ -395,7 +398,6 @@ main section.farm-to-table .central .aside .search {
   border-radius: 5px;
   border: 1px solid #939697;
   background-color: white;
-  text-align: left;
   padding: 10px 20px;
 }
 main section.farm-to-table .central .aside .search i {
@@ -407,4 +409,66 @@ main section.farm-to-table .central .aside .search input {
   font-family: "Catamaran", sans-serif;
   vertical-align: middle;
   margin-left: 20px;
+}
+main section.farm-to-table .central .aside .social {
+  margin-top: 50px;
+}
+main section.farm-to-table .central .aside .social h4 {
+  font-family: "Vidaloka", sans-serif;
+  color: #272628;
+  color: #FC7625;
+}
+main section.farm-to-table .central .aside .social ul {
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+}
+main section.farm-to-table .central .aside .social ul li {
+  width: 35px;
+  height: 35px;
+  border-radius: 5px;
+  border: 0.5px solid #adafb0;
+  text-align: center;
+  line-height: 35px;
+  margin-right: 10px;
+}
+main section.farm-to-table .central .aside .social ul li a {
+  color: #6a6b6c;
+}
+main section.farm-to-table .central .aside .category {
+  margin-top: 60px;
+  display: flex;
+}
+main section.farm-to-table .central .aside .category span {
+  width: 50%;
+  text-align: center;
+  font-family: "Vidaloka", sans-serif;
+  color: #272628;
+  padding: 20px 0;
+  border: 0.5px solid #adafb0;
+}
+main section.farm-to-table .central .aside .category span:first-child {
+  border-right: none;
+  background-color: white;
+}
+main section.farm-to-table .central .aside .bannerLinks {
+  margin-top: 45px;
+}
+main section.farm-to-table .central .aside .bannerLinks li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
+}
+main section.farm-to-table .central .aside .bannerLinks li img {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  margin-right: 15px;
+  vertical-align: middle;
+}
+main section.farm-to-table .central .aside .bannerLinks li h4 {
+  font-size: 17px;
+}
+main section.farm-to-table .central .aside .bannerLinks li span {
+  font-size: 14px;
 }

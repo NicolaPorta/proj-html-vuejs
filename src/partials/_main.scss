@@ -167,6 +167,7 @@ main {
             }
             .aside {
                 width: 372px;
+                text-align: left;
                 .recipe {
                     background-image: url('../img/ad-bg.jpg');
                     background-size: cover;
@@ -177,12 +178,14 @@ main {
                         width: 110px;
                         margin: auto;
                         font-weight: 600;
+                        text-align: center;
                     }
                 }
                 .city-guide {
                     margin: 50px 0;
                     position: relative;
                     div {
+                        text-align: center;
                         font-size: 14px;
                         @include buttonsStyle;
                         padding: 10px 0;
@@ -209,7 +212,6 @@ main {
                     border-radius: 5px;
                     border: 1px solid $socialIconsColor;
                     background-color: $backHeaderColor;
-                    text-align: left;
                     padding: 10px 20px;
                     i {
                         cursor: pointer;
@@ -221,6 +223,67 @@ main {
                         vertical-align: middle;
                         margin-left: 20px;
                     }
+                }
+                .social {
+                    margin-top: 50px;
+                    h4 {
+                        @include titleText;
+                        color: $orangeBrand;
+                    }
+                    ul {
+                        display: flex;
+                        align-items: center;
+                        margin-top: 30px;
+                        li {
+                            width: 35px;
+                            height: 35px;
+                            border-radius: 5px;
+                            border: 0.5px solid lighten($socialIconsColor, 10%);
+                            text-align: center;
+                            line-height: 35px;
+                            margin-right: 10px;
+                            a {
+                                color: #6a6b6c;
+                            }
+                        }
+                    }
+                }
+                .category {
+                    margin-top: 60px;
+                    display: flex;
+                    span {
+                        width: 50%;
+                        text-align: center;
+                        @include titleText;
+                        padding: 20px 0;
+                        border: 0.5px solid lighten($socialIconsColor, 10%);
+                        &:first-child {
+                            border-right: none;
+                            background-color: $backHeaderColor;
+                        }
+                    }
+                }
+                .bannerLinks {
+                    margin-top: 45px;
+                    li {
+                        display: flex;
+                        align-items: center;
+                        margin-bottom: 25px;
+                        img {
+                            width: 52px;
+                            height: 52px;
+                            border-radius: 50%;
+                            margin-right: 15px;
+                            vertical-align: middle;
+                        }
+                        h4 {
+                            font-size: 17px;
+                        }
+                        span {
+                            font-size: 14px;
+                        }
+                    }
+                    
                 }
             }
         }
