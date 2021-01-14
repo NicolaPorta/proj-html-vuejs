@@ -15,6 +15,10 @@
     background-color: $orangeBrand;
     color: $backHeaderColor;
     font-family: 'Catamaran', sans-serif;
+    transition: all 0.3s;
+        &:hover {
+            background-color: darken($orangeBrand, 8%);
+        }
 }
 
 @mixin lines {

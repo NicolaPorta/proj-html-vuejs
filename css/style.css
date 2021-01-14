@@ -50,6 +50,8 @@ ul {
   font-family: "Vidaloka", sans-serif;
   color: white;
   font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
 }
 
 .photo {
@@ -108,6 +110,10 @@ img {
   position: fixed;
   bottom: 30px;
   left: 80px;
+  transition: all 0.5s;
+}
+.turn-up:hover {
+  background-color: #FC7625;
 }
 
 .bigBanner .text {
@@ -137,8 +143,12 @@ header .top .download a span {
   background-color: #FC7625;
   color: white;
   font-family: "Catamaran", sans-serif;
+  transition: all 0.3s;
   padding: 0 5px;
   font-size: 10px;
+}
+header .top .download a span:hover {
+  background-color: #f55e03;
 }
 header .top .icons {
   font-size: 16px;
@@ -161,6 +171,8 @@ header .logo {
 }
 
 nav {
+  padding-bottom: 5px;
+  box-shadow: 0 2px 2px 1px rgba(0, 0, 0, 0.1);
   width: 100%;
   background-color: white;
   text-align: center;
@@ -185,7 +197,7 @@ nav ul li {
   display: inline-block;
   padding: 15px 0;
 }
-nav ul li:hover a::before {
+nav ul li:not(:first-child):hover a::before {
   content: "";
   position: absolute;
   bottom: 0;
@@ -255,6 +267,11 @@ nav ul li a {
   position: relative;
   transition: all 0.3s;
 }
+nav ul li:first-child a {
+  color: #FC7625;
+  border-bottom: 3.5px solid #FC7625;
+  padding-bottom: 1.5px;
+}
 nav i {
   margin-left: 30px;
 }
@@ -268,6 +285,7 @@ nav i {
   display: flex;
 }
 .jumbotron .banner {
+  cursor: initial;
   display: inline-block;
   width: 700px;
   background-color: white;
@@ -284,7 +302,16 @@ nav i {
 .jumbotron .banner h1 {
   font-weight: 400;
   font-size: 45px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
+}
+.jumbotron .banner h1:hover {
+  color: #FC7625;
+  cursor: default;
+}
+.jumbotron .banner span {
+  cursor: default;
+  color: #383b39;
+  font-size: 18px;
 }
 .jumbotron .banner .pick {
   position: absolute;
@@ -292,12 +319,16 @@ nav i {
   background-color: #FC7625;
   color: white;
   font-family: "Catamaran", sans-serif;
+  transition: all 0.3s;
   padding: 7px 20px;
   font-size: 16px;
   top: 0;
   left: 50%;
   transform: translate(-50%, -50%);
   border-radius: 8px;
+}
+.jumbotron .banner .pick:hover {
+  background-color: #f55e03;
 }
 
 main {
@@ -349,6 +380,12 @@ main section.foodie-journal ul li h3 {
   font-size: 23px;
   font-weight: 500;
   margin-top: 25px;
+  transition: all 0.5s;
+  margin-bottom: 5px;
+  padding: 0 15px;
+}
+main section.foodie-journal ul li h3:hover {
+  color: #FC7625;
 }
 main section.popular-recipes .images {
   padding: 60px 0;
@@ -361,6 +398,10 @@ main section.popular-recipes .images h3 {
   font-size: 23px;
   font-weight: 500;
   margin-top: 25px;
+  transition: all 0.5s;
+}
+main section.popular-recipes .images h3:hover {
+  color: #FC7625;
 }
 main section.popular-recipes .images > * {
   max-width: 600px;
@@ -377,13 +418,31 @@ main section.popular-recipes .images .bigBanner .text p {
   margin: 25px 0;
   border-top: 1px dotted #bcbcbd;
 }
+main section.popular-recipes .images .bigBanner p {
+  font-size: 18px;
+  padding-right: 20px;
+  margin-bottom: 5px;
+}
+main section.popular-recipes .images .bigBanner span a {
+  font-family: "Catamaran", sans-serif;
+  color: #383b39;
+  transition: all 0.5s;
+  font-size: 15px;
+}
+main section.popular-recipes .images .bigBanner span a:hover {
+  color: #FC7625;
+}
 main section.popular-recipes .images .bigBanner .btn {
   border-radius: 2px;
   background-color: #FC7625;
   color: white;
   font-family: "Catamaran", sans-serif;
+  transition: all 0.3s;
   font-size: 14px;
   padding: 10px 20px;
+}
+main section.popular-recipes .images .bigBanner .btn:hover {
+  background-color: #f55e03;
 }
 main section.popular-recipes .images .smallBanner {
   margin-left: 45px;
@@ -413,8 +472,8 @@ main section.culinary-collection .types .cards {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
   font-size: 14px;
+  padding: 10px;
 }
 main section.culinary-collection .types .cards img {
   width: 96px;
@@ -425,6 +484,23 @@ main section.culinary-collection .types .cards img:hover {
   width: 106px;
   height: 106px;
   cursor: pointer;
+}
+main section.culinary-collection .types .cards a:last-child {
+  width: 100%;
+  text-transform: uppercase;
+  font-weight: 500;
+  padding: 10px 0;
+  transition: all 0.3s;
+}
+main section.culinary-collection .types .cards a:last-child:hover {
+  border-radius: 2px;
+  background-color: #FC7625;
+  color: white;
+  font-family: "Catamaran", sans-serif;
+  transition: all 0.3s;
+}
+main section.culinary-collection .types .cards a:last-child:hover:hover {
+  background-color: #f55e03;
 }
 main section.farm-to-table {
   padding-bottom: 100px;
@@ -444,8 +520,12 @@ main section.farm-to-table .top > a {
   background-color: #FC7625;
   color: white;
   font-family: "Catamaran", sans-serif;
+  transition: all 0.3s;
   padding: 10px 25px;
   font-size: 14px;
+}
+main section.farm-to-table .top > a:hover {
+  background-color: #f55e03;
 }
 main section.farm-to-table .top > a i {
   margin-left: 5px;
@@ -475,6 +555,11 @@ main section.farm-to-table .central .main .bigBanner h3 {
   font-size: 23px;
   font-weight: 500;
   margin-top: 40px;
+  transition: all 0.5s;
+  margin-bottom: 5px;
+}
+main section.farm-to-table .central .main .bigBanner h3:hover {
+  color: #FC7625;
 }
 main section.farm-to-table .central .main .bigBanner a {
   font-size: 14px;
@@ -484,8 +569,22 @@ main section.farm-to-table .central .main .bigBanner a {
 main section.farm-to-table .central .main .bigBanner i {
   vertical-align: middle;
 }
+main section.farm-to-table .central .main .bigBanner .left {
+  transition: all 0.5s;
+}
+main section.farm-to-table .central .main .bigBanner .left i {
+  font-size: 10px;
+}
+main section.farm-to-table .central .main .bigBanner .left:hover {
+  color: #FC7625;
+}
 main section.farm-to-table .central .main .bigBanner .right {
+  vertical-align: middle;
   float: right;
+  transition: all 0.5s;
+}
+main section.farm-to-table .central .main .bigBanner .right:hover {
+  color: #FC7625;
 }
 main section.farm-to-table .central .main .bottom {
   margin-top: 20px;
@@ -505,12 +604,18 @@ main section.farm-to-table .central .main .bottom .smallBanner h3 {
   color: #272628;
   font-size: 23px;
   font-weight: 500;
+  padding: 0 20px;
+  transition: all 0.5s;
+}
+main section.farm-to-table .central .main .bottom .smallBanner h3:hover {
+  color: #FC7625;
 }
 main section.farm-to-table .central .main .more {
   font-weight: 600;
   background-color: #ddd8d3;
   padding: 8px 0;
   font-size: 17px;
+  cursor: pointer;
 }
 main section.farm-to-table .central .aside {
   width: 372px;
@@ -528,21 +633,28 @@ main section.farm-to-table .central .aside .recipe h3 {
   margin: auto;
   font-weight: 600;
   text-align: center;
+  font-family: "Catamaran", sans-serif;
+  color: #383b39;
 }
 main section.farm-to-table .central .aside .city-guide {
   margin: 40px 0;
   position: relative;
 }
-main section.farm-to-table .central .aside .city-guide div {
+main section.farm-to-table .central .aside .city-guide .allCities {
+  display: block;
   text-align: center;
   font-size: 14px;
   border-radius: 2px;
   background-color: #FC7625;
   color: white;
   font-family: "Catamaran", sans-serif;
+  transition: all 0.3s;
   padding: 10px 0;
 }
-main section.farm-to-table .central .aside .city-guide div i {
+main section.farm-to-table .central .aside .city-guide .allCities:hover {
+  background-color: #f55e03;
+}
+main section.farm-to-table .central .aside .city-guide .allCities i {
   padding: 0 5px;
 }
 main section.farm-to-table .central .aside .city-guide span {
@@ -574,6 +686,7 @@ main section.farm-to-table .central .aside .search input {
   font-family: "Catamaran", sans-serif;
   vertical-align: middle;
   margin-left: 20px;
+  font-size: 18px;
 }
 main section.farm-to-table .central .aside .social {
   margin-top: 40px;
@@ -584,6 +697,7 @@ main section.farm-to-table .central .aside .social h4 {
   font-size: 23px;
   font-weight: 500;
   color: #FC7625;
+  font-size: 20px;
 }
 main section.farm-to-table .central .aside .social ul {
   display: flex;
@@ -601,23 +715,33 @@ main section.farm-to-table .central .aside .social ul li {
 }
 main section.farm-to-table .central .aside .social ul li a {
   color: #6a6b6c;
+  transition: all 0.3s;
+}
+main section.farm-to-table .central .aside .social ul li:hover a {
+  color: #838586;
 }
 main section.farm-to-table .central .aside .category {
   margin-top: 40px;
   display: flex;
 }
 main section.farm-to-table .central .aside .category span {
+  cursor: pointer;
   width: 50%;
   text-align: center;
   font-family: "Vidaloka", sans-serif;
   color: #272628;
   font-size: 23px;
   font-weight: 500;
-  padding: 20px 0;
+  font-size: 20px;
+  padding: 15px 0;
   border: 0.5px solid #adafb0;
+  transition: all 0.5s;
 }
 main section.farm-to-table .central .aside .category span:first-child {
   border-right: none;
+  background-color: white;
+}
+main section.farm-to-table .central .aside .category span:hover {
   background-color: white;
 }
 main section.farm-to-table .central .aside .bannerLinks {
@@ -641,13 +765,18 @@ main section.farm-to-table .central .aside .bannerLinks a .info {
 }
 main section.farm-to-table .central .aside .bannerLinks a .info h4 {
   font-size: 17px;
+  font-weight: 500;
+  transition: all 0.5s;
+}
+main section.farm-to-table .central .aside .bannerLinks a .info h4:hover {
+  color: #FC7625;
 }
 main section.farm-to-table .central .aside .bannerLinks a .info span {
   font-size: 14px;
 }
 main section.farm-to-table .central .aside .tweets {
   background-color: white;
-  padding: 8px;
+  padding: 15px;
   border-radius: 5px;
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -675,6 +804,10 @@ main section.farm-to-table .central .aside .tweets .tweet-body {
   display: flex;
   padding: 15px;
 }
+main section.farm-to-table .central .aside .tweets .tweet-body:hover {
+  background-color: #f2f2f2;
+  cursor: pointer;
+}
 main section.farm-to-table .central .aside .tweets .tweet-body img {
   width: 32px;
   height: 32px;
@@ -686,7 +819,7 @@ main section.farm-to-table .central .aside .tweets .tweet-body .tweet .user {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 290px;
+  width: 280px;
 }
 main section.farm-to-table .central .aside .tweets .tweet-body .tweet .user h4 {
   color: black;
@@ -694,13 +827,16 @@ main section.farm-to-table .central .aside .tweets .tweet-body .tweet .user h4 {
 main section.farm-to-table .central .aside .tweets .tweet-body .tweet .user i {
   color: #e8e5e1;
 }
+main section.farm-to-table .central .aside .tweets .tweet-body .tweet:hover .fab.fa-twitter {
+  color: #1DA1F2;
+}
 main section.farm-to-table .central .aside .tweets .tweet-body .tweet p {
   font-size: 14px;
   line-height: 20px;
   padding-right: 10px;
 }
 main section.farm-to-table .central .aside .tweets .tweet-body .tweet-img {
-  width: 290px;
+  width: 280px;
   height: 175px;
   border-radius: 5px;
   margin-top: 25px;
@@ -712,9 +848,17 @@ main section.farm-to-table .central .aside .tweets .tweet-body .icons {
 }
 main section.farm-to-table .central .aside .tweets .tweet-body .icons i {
   margin-right: 20px;
+  transition: all 0.5s;
+}
+main section.farm-to-table .central .aside .tweets .tweet-body .icons i:first-child:hover {
+  color: red;
+}
+main section.farm-to-table .central .aside .tweets .tweet-body .icons i.fas.fa-external-link-alt:hover {
+  color: #2b7bb9;
 }
 main section.farm-to-table .central .aside .tweets .tweet-body .icons span {
   float: right;
+  font-size: 12px;
 }
 
 section.subscribe {
@@ -755,15 +899,20 @@ section.subscribe form input {
   border-radius: 5px;
   border: 1px solid #939697;
   padding: 10px 20px;
+  font-size: 18px;
 }
 section.subscribe form a {
   border-radius: 2px;
   background-color: #FC7625;
   color: white;
   font-family: "Catamaran", sans-serif;
+  transition: all 0.3s;
   padding: 10px 50px;
   font-size: 14px;
   margin-left: 20px;
+}
+section.subscribe form a:hover {
+  background-color: #f55e03;
 }
 section.subscribe form .bottom {
   font-size: 12px;
@@ -813,6 +962,10 @@ footer .top .logo ul a {
   color: #939697;
   margin-right: 25px;
   font-size: 18px;
+  transition: all 0.5s;
+}
+footer .top .logo ul a:hover {
+  color: #adafb0;
 }
 footer .top .nav li {
   padding: 10px 0;
@@ -822,6 +975,10 @@ footer .top .nav li a {
   color: #383b39;
   font-weight: 600;
   font-size: 18px;
+  transition: all 0.5s;
+}
+footer .top .nav li a:hover {
+  color: #FC7625;
 }
 footer .top .contact i {
   color: #939697;
@@ -840,6 +997,10 @@ footer .top .contact div {
 footer .top .contact div a {
   font-family: "Catamaran", sans-serif;
   color: #383b39;
+  transition: all 0.5s;
+}
+footer .top .contact div a:hover {
+  color: #FC7625;
 }
 footer .top .getApp h3 {
   color: #FC7625;

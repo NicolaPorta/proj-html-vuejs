@@ -48,6 +48,8 @@ ul {
         font-family: 'Vidaloka', sans-serif;
         color:$backHeaderColor;
         font-weight: 500;
+        font-size: 18px;
+        line-height: 27px;
     }
 }
 
@@ -106,6 +108,10 @@ img {
     position: fixed;
     bottom: 30px;
     left: 80px;
+    transition: all 0.5s;
+    &:hover {
+        background-color: $orangeBrand;
+    }
 }
 
 .bigBanner  {

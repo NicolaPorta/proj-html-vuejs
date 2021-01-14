@@ -21,6 +21,10 @@ footer {
                     color: $socialIconsColor;
                     margin-right: 25px;
                     font-size: 18px;
+                    transition: all .5s;
+                    &:hover {
+                        color: lighten($socialIconsColor, 10%);
+                    }
                 }
             }
         }
@@ -31,6 +35,10 @@ footer {
                     @include commonText;
                     font-weight: 600;
                     font-size: 18px;
+                    transition: all 0.5s;
+                    &:hover {
+                        color: $orangeBrand;
+                    }
                 }
             }
             
@@ -51,6 +59,10 @@ footer {
                 display: flex;
                 a {
                     @include commonText;
+                    transition: all .5s;
+                    &:hover {
+                        color: $orangeBrand;
+                    }
                 }
             }
 

@@ -66,12 +66,14 @@
                 <ul>
                     <li v-for="image in foodieJournal">
                         <div class="photo">
-                            <div class="layover"><i class="fas fa-link"></i>
-                                <h4>{{image.title}}</h4></div>
+                            <a :href="image.href" class="layover">
+                                <i class="fas fa-link"></i>
+                                <h4>{{image.title}}</h4>
+                            </a>
                             <img :src="image.img_src" :alt="image.title">
                         </div>
-                        <h3>{{image.title}}</h3>
-                        <span>By admin|March 25th, 2019</span>
+                        <a :href="image.href"><h3>{{image.title}}</h3></a>
+                        <span>By admin | March 25th, 2019</span>
                     </li>
                 </ul>
             </section>
@@ -84,21 +86,25 @@
                 <div class="images">
                     <div class="bigBanner">
                         <div class="photo">
-                            <div class="layover"><i class="fas fa-link"></i>
-                                <h4>Lunch Favourite with Salad, Naan And Beans</h4></div>
+                            <a href="https://avada.theme-fusion.com/food/recipes/lunch-favourite-with-salad-naan-and-beans/" class="layover">
+                                <i class="fas fa-link"></i>
+                                <h4>Lunch Favourite with Salad, Naan And Beans</h4>
+                            </a>
                         <img src="img/Yogurt-Nan-600x395.jpg" alt="">
                         </div>
                         <div class="text">
-                            <h3>Lunch Favourite with Salad, Naan And Beans</h3>
-                            <span>Bakery, Featured, Healthy, Latest Recipes, Staff Picks</span>
+                            <a href="https://avada.theme-fusion.com/food/recipes/lunch-favourite-with-salad-naan-and-beans/"><h3>Lunch Favourite with Salad, Naan And Beans</h3></a>
+                            <span><a href="">Bakery</a>, <a href="">Featured</a>, <a href="">Healthy</a>, <a href="">Latest Recipes</a>, <a href="">Staff Picks</a></span>
                             <p>Suspendisse at semper odio. Nam fringilla scelerisque tincidunt. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec tincidunt posuere ornare. Phasellus placerat odio non feugiat sollicitudin. Integer vitae elementum ex. Sed porttitor, diam eget convallis volutpat, arcu tellus facilisis nulla, id dignissim orci leo id</p>
-                            <span class="btn">LEARN MORE</span>
+                            <a href="https://avada.theme-fusion.com/food/recipes/lunch-favourite-with-salad-naan-and-beans/" class="btn">LEARN MORE</a>
                         </div>
                     </div>
                     <ul class="smallBanner">
                         <li class="photo" v-for="image in popularRecipes">
-                            <div class="layover"><i class="fas fa-link"></i>
-                                <h4>{{image.title}}</h4></div>
+                            <a :href="image.href" class="layover">
+                                <i class="fas fa-link"></i>
+                                <h4>{{image.title}}</h4>
+                            </a>
                             <img :src="image.img_src" :alt="image.title">
                         </li>
                     </ul>
@@ -113,7 +119,7 @@
                 <ul class="types">
                     <li class="cards" v-for="card in culinaryCollection">
                         <a :href="card.href"><img :src="card.img_src" :alt="card.title"></a>
-                        <a :href="card.href"><span>{{card.title}}</span></a>
+                        <a :href="card.href"><div>{{card.title}}</div></a>
                     </li>
                 </ul>
             </section>
@@ -134,33 +140,33 @@
                     <div class="main">
                         <div class="bigBanner">
                             <div class="photo">
-                                <div class="layover">
+                                <a href="https://avada.theme-fusion.com/food/featured/food-corner-top-japanese-restaurants-for-sushi/" class="layover">
                                     <i class="fas fa-link"></i>
-                                    <h4>Food Corner: Top Japanese Restaurants for Sushi</h4></div>
+                                    <h4>Food Corner: Top Japanese Restaurants for Sushi</h4>
+                                </a>
                                 <img src="img/single-post-img3-600x395.jpg" alt="Food Corner: Top Japanese Restaurants for Sushi">
                             </div>
                             <div class="text">
-                                <h3>Food Corner: Top Japanese Restaurants for Sushi</h3>
+                                <a href="https://avada.theme-fusion.com/food/featured/food-corner-top-japanese-restaurants-for-sushi/"><h3>Food Corner: Top Japanese Restaurants for Sushi</h3></a>
                                 <span>By admin | March 25th, 2019</span>
                                 <p>Suspendisse at semper odio. Nam fringilla scelerisque tincidunt. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec tincidunt posuere ornare. Phasellus placerat odio non feugiat sollicitudin. Integer vitae elementum ex. Sed porttitor, diam eget convallis volutpat, arcu tellus facilisis nulla, id dignissim orci leo id</p>
-                                <a href="#">Read More <i class="fas fa-chevron-right"></i></a>
-                                <div class=" right">
+                                <a href="https://avada.theme-fusion.com/food/featured/food-corner-top-japanese-restaurants-for-sushi/" class="left">Read More <i class="fas fa-chevron-right"></i></a>
+                                <a href="https://avada.theme-fusion.com/food/featured/food-corner-top-japanese-restaurants-for-sushi/#respond" class=" right">
                                     0 <i class="far fa-comments"></i>
-                                </div>
-                                
+                                </a>
                             </div>
                         </div>
                         <ul class="bottom">
                             <li class="smallBanner" v-for="banner in farmToTable">
                                 <div class="photo">
-                                    <div class="layover">
+                                    <a :href="banner.href" class="layover">
                                         <i class="fas fa-link"></i>
                                         <h4>{{banner.title}}</h4>
-                                    </div>
+                                    </a>
                                     <img :src="banner.img_src" :alt="banner.title">
                                 </div>
                                 <div class="text">
-                                    <h3>{{banner.title}}</h3>
+                                    <a :href="banner.href"><h3>{{banner.title}}</h3></a>
                                     <span>By admin | March 25th, 2019</span>     
                                 </div>
                             </li>
@@ -168,15 +174,15 @@
                         <div class="more">LEAD MORE POSTS</div>
                     </div>
                     <div class="aside">
-                        <div class="recipe">
+                        <a href="https://avada.theme-fusion.com/food/recipe-category/latest-recipes/" class="recipe">
                             <h3>VIEW OUR LATEST RECIPES</h3>
-                        </div>
+                        </a>
                         <div class="city-guide">
-                            <a href="#">
+                            <a href="https://avada.theme-fusion.com/food/places/singapore/">
                                 <img src="img/singapore-featured-image-400x263.jpg" alt="">
                             <span>City Guide: Singapore</span>
                             </a>
-                            <div> <i class="fas fa-globe-americas"></i>VIEW ALL CITY GUIDES</div>
+                            <a class="allCities" href="https://avada.theme-fusion.com/food/places/"><i class="fas fa-globe-americas"></i>VIEW ALL CITY GUIDES</a>
                         </div>
                         <hr>
                         <div class="search">
@@ -187,7 +193,7 @@
                             <h4>Follow Us</h4>
                             <ul>
                                 <li v-for="icon in socialIcons">
-                                    <a href=""><i :class="icon.style"></i></a>
+                                    <a :href="icon.href"><i :class="icon.style"></i></a>
                                 </li>
                                 <li>
                                     <a href=""><i class="fab fa-pinterest-p"></i></a>
@@ -219,7 +225,7 @@
                                 </div>
                                 <i class="fas fa-info-circle"></i>
                             </div>
-                            <div class="tweet-body">
+                            <div href="" class="tweet-body">
                                 <img src="img/3a74ce3d0532b7773b174c45ca3bd05a_normal.png" alt="">
                                 <div class="tweet">
                                     <div href="" class="user">
@@ -233,7 +239,7 @@
                                     <div class="icons">
                                         <i class="far fa-heart"></i>
                                         <i class="fas fa-external-link-alt"></i>
-                                        <span class="date">date</span>
+                                        <span class="date">14 January, 2021</span>
                                     </div>
                                 </div>
                             </div>
@@ -273,7 +279,7 @@
                     <img src="img/avada-food-logo-mob-2x.png" alt="">
                     <ul>
                         <li v-for="icon in socialIcons">
-                            <a href=""><i :class="icon.style"></i></a>
+                            <a :href="icon.href"><i :class="icon.style"></i></a>
                         </li>
                     </ul>
                 </div>
@@ -314,7 +320,7 @@
                 <img src="img/folder.png" alt="">
                 <div>Demos</div>
             </a>
-            <a href="" class="buyNow">
+            <a href="https://themeforest.net/item/avada-responsive-multipurpose-theme/2833226?irgwc=1&clickid=3q40Qix-SxyLWguwUx0Mo3EFUkEUGxRtmzYERE0&iradid=275988&irpid=1292887&iradtype=ONLINE_TRACKING_LINK&irmptype=mediapartner&mp_value1=&utm_campaign=af_impact_radius_1292887&utm_medium=affiliate&utm_source=impact_radius" class="buyNow">
                 <div class="price">
                     <span>$</span><strong>39
                     </div></strong>

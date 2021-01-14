@@ -6,6 +6,7 @@
     background-attachment: fixed;
     display: flex;
     .banner {
+        cursor: initial;
         display: inline-block;
         width: 700px;
         background-color: $backHeaderColor;
@@ -18,7 +19,16 @@
         h1 {
             font-weight: 400;
             font-size: 45px;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
+            &:hover {
+                color: $orangeBrand;
+                cursor: default;
+            }
+        }
+        span {
+            cursor: default;
+            color: #383b39;
+            font-size: 18px;
         }
         .pick {
             position: absolute;
