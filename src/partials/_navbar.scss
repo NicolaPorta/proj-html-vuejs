@@ -6,15 +6,73 @@ nav {
     z-index: 1;
     right: 0;
     top: 0;
+    i {
+        transition: all 0.3s;
+        &:hover {
+            color: $orangeBrand;
+            cursor: pointer;
+        }
+    }
     ul {
         display: inline-block;
         li {
+            cursor: pointer;
             display: inline-block;
             padding: 15px 0;
+            &:hover a::before {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                height: 3px;
+                background-color: $orangeBrand;
+                animation: underLinkright .3s linear;
+                animation-fill-mode: forwards;
+                text-align: center;
+
+                @keyframes underLinkright {
+                    0% {
+                        width: 50%;
+                    }
+
+                    100% {
+                        width: 100%;
+                    }
+                    
+                }
+            }
+            &:hover a::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                height: 3px;
+                background-color: $backHeaderColor;
+                animation: underLinkLeft .3s linear;
+                animation-fill-mode: forwards;
+                z-index: 1;
+
+                @keyframes underLinkLeft {
+                    0% {
+                        width: 50%;
+                    }
+
+                    100% {
+                        width: 0;
+                    }
+                    
+                }
+            }
+            &:hover a {
+                color: $orangeBrand;
+            }
             a {
+                padding-bottom: 5px;
                 font-weight: 600;
                 @include commonText;
                 margin: 0 30px;
+                position: relative;
+                transition: all .3s;
             }
         }
     }

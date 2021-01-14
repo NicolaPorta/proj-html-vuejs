@@ -2,22 +2,35 @@ var app = new Vue(
     {
         el: "#root",
         data: {
+            jumbotron:"",
+            headerLogo:"",
+            footerLogo:"",
+            popularRecipesBigBanner:{
+
+            },
+            farmToTableBigBanner:{
+
+            },
             socialIcons: [
                 {
                     "name": "Facebook",
-                    "style": "fab fa-facebook-f"
+                    "style": "fab fa-facebook-f",
+                    "href": "https://www.facebook.com/login/?next=https%3A%2F%2Fwww.facebook.com%2FThemeFusion-101565403356430%2F"
                 },
                 {
                     "name": "Instagram",
-                    "style": "fab fa-instagram"
+                    "style": "fab fa-instagram",
+                    "href": "https://www.instagram.com/themefusion/"
                 },
                 {
                     "name": "Twitter",
-                    "style": "fab fa-twitter"
+                    "style": "fab fa-twitter",
+                    "href": "https://twitter.com/theme_fusion"
                 },
                 {
                     "name": "You Tube",
-                    "style": "fab fa-youtube"
+                    "style": "fab fa-youtube",
+                    "href": "https://www.youtube.com/channel/UC_C7uAOAH9RMzZs-CKCZ62w"
                 }
             ],
             navLinks: [

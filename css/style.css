@@ -146,6 +146,9 @@ header .top .icons {
 header .top .icons li {
   display: inline-block;
 }
+header .top .icons li:hover i {
+  color: #adafb0;
+}
 header .top .icons i {
   padding: 0 15px;
   color: #939697;
@@ -167,18 +170,90 @@ nav {
   right: 0;
   top: 0;
 }
+nav i {
+  transition: all 0.3s;
+}
+nav i:hover {
+  color: #FC7625;
+  cursor: pointer;
+}
 nav ul {
   display: inline-block;
 }
 nav ul li {
+  cursor: pointer;
   display: inline-block;
   padding: 15px 0;
 }
+nav ul li:hover a::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  background-color: #FC7625;
+  -webkit-animation: underLinkright 0.3s linear;
+          animation: underLinkright 0.3s linear;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  text-align: center;
+}
+@-webkit-keyframes underLinkright {
+  0% {
+    width: 50%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@keyframes underLinkright {
+  0% {
+    width: 50%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+nav ul li:hover a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  background-color: white;
+  -webkit-animation: underLinkLeft 0.3s linear;
+          animation: underLinkLeft 0.3s linear;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  z-index: 1;
+}
+@-webkit-keyframes underLinkLeft {
+  0% {
+    width: 50%;
+  }
+  100% {
+    width: 0;
+  }
+}
+@keyframes underLinkLeft {
+  0% {
+    width: 50%;
+  }
+  100% {
+    width: 0;
+  }
+}
+nav ul li:hover a {
+  color: #FC7625;
+}
 nav ul li a {
+  padding-bottom: 5px;
   font-weight: 600;
   font-family: "Catamaran", sans-serif;
   color: #383b39;
   margin: 0 30px;
+  position: relative;
+  transition: all 0.3s;
 }
 nav i {
   margin-left: 30px;
