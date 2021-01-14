@@ -6,6 +6,8 @@
 @mixin titleText  {
     font-family: 'Vidaloka', sans-serif;
     color: #272628;
+    font-size: 23px;
+    font-weight: 500;
 }
 
 @mixin buttonsStyle {

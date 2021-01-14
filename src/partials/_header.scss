@@ -21,6 +21,9 @@ header {
         }
         .icons {
             font-size: 16px;
+            li {
+                display: inline-block;
+            }
             i {
                 padding: 0 15px;
                 color: $socialIconsColor;

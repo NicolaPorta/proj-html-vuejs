@@ -44,8 +44,8 @@ ul {
         margin-bottom: 10px;
         text-align: center;
     }
-    h3 {
-        @include titleText;
+    h4 {
+        font-family: 'Vidaloka', sans-serif;
         color:$backHeaderColor;
         font-weight: 500;
     }
