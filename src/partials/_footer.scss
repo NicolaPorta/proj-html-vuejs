@@ -17,15 +17,27 @@ footer {
             }
             ul {
                 display: flex;
-                a {
-                    color: $socialIconsColor;
-                    margin-right: 25px;
-                    font-size: 18px;
-                    transition: all .5s;
+                li {
+                    position: relative;
+                    div {
+                        @include nameBanner;
+                    }
+                    a {
+                        color: $socialIconsColor;
+                        margin: 10px;
+                        font-size: 18px;
+                        transition: all .5s;
+                        &:hover {
+                            color: lighten($socialIconsColor, 10%);
+                        }
+                    }
                     &:hover {
-                        color: lighten($socialIconsColor, 10%);
+                        div {
+                            opacity:1;
+                        }
                     }
                 }
+                
             }
         }
         .nav {

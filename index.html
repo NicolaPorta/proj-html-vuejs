@@ -24,8 +24,9 @@
                     <a href="https://themeforest.net/item/avada-responsive-multipurpose-theme/2833226?irgwc=1&clickid=3q40Qix-SxyLWguwUx0Mo3EFUkEUBxSdmzYERE0&iradid=275988&irpid=1292887&iradtype=ONLINE_TRACKING_LINK&irmptype=mediapartner&mp_value1=&utm_campaign=af_impact_radius_1292887&utm_medium=affiliate&utm_source=impact_radius">Advertise with us</a>
                 </div>
                 <ul class="icons">
-                    <li v-for="icon in socialIcons">
+                    <li v-for="(icon,index) in socialIcons">
                         <a :href="icon.href"><i :class="icon.style"></i></a>
+                        <div class="socialName">{{icon.name}}</div>
                     </li>
                 </ul>
             </div>
@@ -234,7 +235,6 @@
                                     </div>
                                     <a href="">@Theme_Fusion</a>
                                     <p>Do you need sublime WordPress hosting for your next website? Take advantage of exclusive partner offers that we have secured just for you, & launch your site in seconds with <a href="">#avada</a> on WP Engine hosting & get 30% Off this Black Friday <a href="">bit.ly/3kjLLE2</a> <a href="">#BlackFriday2020</a></p>
-    
                                     <img class="tweet-img" src="img/En2TRxLW4AEiWUN.jpeg" alt="">
                                     <div class="icons">
                                         <i class="far fa-heart"></i>
@@ -250,7 +250,6 @@
         <!-- /FARM-TO-TABLE -->
         </main>
         <!-- /MAIN -->
-    
         <section class="subscribe">
             <form action="">
                 <h2>Subscribe <span>&</span> Receive A Free eBook</h2>
@@ -280,6 +279,7 @@
                     <ul>
                         <li v-for="icon in socialIcons">
                             <a :href="icon.href"><i :class="icon.style"></i></a>
+                            <div>{{icon.name}}</div>
                         </li>
                     </ul>
                 </div>

@@ -28,7 +28,7 @@ var app = new Vue(
                     "href": "https://twitter.com/theme_fusion"
                 },
                 {
-                    "name": "You Tube",
+                    "name": "YouTube",
                     "style": "fab fa-youtube",
                     "href": "https://www.youtube.com/channel/UC_C7uAOAH9RMzZs-CKCZ62w"
                 }
@@ -229,13 +229,7 @@ var app = new Vue(
                     "title": "Ice Cream Heaven With Vanilla, Chocolate And Pistachio",
                     "href": "https://avada.theme-fusion.com/food/recipes/ice-cream-heaven-with-vanilla-chocolate-and-pistachio/"
                 }
-            ],
-
-
-
-        },
-        methods: {
-            
+            ]
         }
         
     }

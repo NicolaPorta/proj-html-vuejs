@@ -48,3 +48,27 @@
     outline: none;
     font-family: 'Catamaran', sans-serif;
 }
+
+@mixin nameBanner {
+    font-size: 12px;
+    background-color:#383b39;
+    color: $backHeaderColor;
+    padding: 2px 5px;
+    border-radius: 3px;
+    position: absolute;
+    bottom: -24px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all .3s;
+    opacity: 0;
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, -50%) rotateZ(45deg);
+        height: 5px;
+        width: 5px;
+        background-color: #383b39;
+    }
+}

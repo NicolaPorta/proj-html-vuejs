@@ -154,12 +154,40 @@ header .top .icons {
   font-size: 16px;
 }
 header .top .icons li {
+  position: relative;
   display: inline-block;
 }
 header .top .icons li:hover i {
   color: #adafb0;
 }
+header .top .icons li:hover div {
+  opacity: 1;
+}
+header .top .icons li div {
+  font-size: 12px;
+  background-color: #383b39;
+  color: white;
+  padding: 2px 5px;
+  border-radius: 3px;
+  position: absolute;
+  bottom: -24px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: all 0.3s;
+  opacity: 0;
+}
+header .top .icons li div::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%) rotateZ(45deg);
+  height: 5px;
+  width: 5px;
+  background-color: #383b39;
+}
 header .top .icons i {
+  transition: all 0.5s;
   padding: 0 15px;
   color: #939697;
 }
@@ -958,14 +986,43 @@ footer .top .logo img {
 footer .top .logo ul {
   display: flex;
 }
-footer .top .logo ul a {
+footer .top .logo ul li {
+  position: relative;
+}
+footer .top .logo ul li div {
+  font-size: 12px;
+  background-color: #383b39;
+  color: white;
+  padding: 2px 5px;
+  border-radius: 3px;
+  position: absolute;
+  bottom: -24px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: all 0.3s;
+  opacity: 0;
+}
+footer .top .logo ul li div::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%) rotateZ(45deg);
+  height: 5px;
+  width: 5px;
+  background-color: #383b39;
+}
+footer .top .logo ul li a {
   color: #939697;
-  margin-right: 25px;
+  margin: 10px;
   font-size: 18px;
   transition: all 0.5s;
 }
-footer .top .logo ul a:hover {
+footer .top .logo ul li a:hover {
   color: #adafb0;
+}
+footer .top .logo ul li:hover div {
+  opacity: 1;
 }
 footer .top .nav li {
   padding: 10px 0;

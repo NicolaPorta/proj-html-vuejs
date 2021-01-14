@@ -22,12 +22,22 @@ header {
         .icons {
             font-size: 16px;
             li {
+                position: relative;
                 display: inline-block;
-                &:hover i {
+                &:hover {
+                    i {
                     color: lighten($socialIconsColor, 10%);
+                    }
+                    div {
+                        opacity: 1;
+                    }
+                }
+                div {
+                    @include nameBanner;
                 }
             }
             i {
+                transition: all .5s;
                 padding: 0 15px;
                 color: $socialIconsColor;
             }
