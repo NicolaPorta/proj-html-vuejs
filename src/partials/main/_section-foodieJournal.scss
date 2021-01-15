@@ -1,0 +1,40 @@
+section.foodie-journal {
+    background-color: $backHeaderColor;
+    position: relative;
+    top: -75px;
+    & > h3 {
+        font-size: 21px;
+        font-weight: 600;
+        padding: 30px 0;
+        position: relative;
+        &::before {
+            @include lines;
+            right: 40px;
+        }
+        &::after {
+            @include lines;
+            left: 40px;
+        }
+    }
+    ul { 
+        padding: 0 40px;
+        @include commonDisplay;
+        margin-bottom: 50px;
+        li {
+            h3 {
+                @include titleText;
+                margin-top: 25px;
+                transition: all .5s;
+                margin-bottom: 5px;
+                padding: 0 15px;
+                &:hover {
+                    color: $orangeBrand;
+                }
+            }
+            width: 345px;
+            position: relative;
+            margin-bottom: 50px;
+        }
+    }
+
+}

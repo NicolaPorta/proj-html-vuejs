@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Vidaloka&display=swap" rel="stylesheet">
     <!-- VUEjs -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
     <link rel="stylesheet" href="css/style.css">
     <title>Avada Food</title>
@@ -30,7 +31,7 @@
                     </li>
                 </ul>
             </div>
-            <a href="https://avada.theme-fusion.com/food/" class="logo">
+            <a :href="headerLogo" class="logo">
                 <img src="img/avada-food-logo.png" alt="" class="logo">
             </a>
         </header>
@@ -82,16 +83,18 @@
     
         <!-- POPULAR-RECIPES -->
             <section class="popular-recipes">
-                <h3>POPULAR RECIPES</h3>
-                <p>Aliquam erat volutpat. Ut quis ligula a magna blandit finibus. Suspendisse maximus lacus non nunc lacinia lobortis.</p>
+                <div class="title">
+                    <h3>POPULAR RECIPES</h3>
+                    <p>Aliquam erat volutpat. Ut quis ligula a magna blandit finibus. Suspendisse maximus lacus non nunc lacinia lobortis.</p>
+                </div>
                 <div class="images">
                     <div class="bigBanner">
                         <div class="photo">
-                            <a href="https://avada.theme-fusion.com/food/recipes/lunch-favourite-with-salad-naan-and-beans/" class="layover">
+                            <a :href="popularRecipesBigBanner.href" class="layover">
                                 <i class="fas fa-link"></i>
-                                <h4>Lunch Favourite with Salad, Naan And Beans</h4>
+                                <h4>{{popularRecipesBigBanner.title}}</h4>
                             </a>
-                        <img src="img/Yogurt-Nan-600x395.jpg" alt="">
+                        <img :src="popularRecipesBigBanner.img_src" alt="popularRecipesBigBanner.title">
                         </div>
                         <div class="text">
                             <a href="https://avada.theme-fusion.com/food/recipes/lunch-favourite-with-salad-naan-and-beans/"><h3>Lunch Favourite with Salad, Naan And Beans</h3></a>
@@ -115,8 +118,10 @@
     
         <!-- CULINARY-COLLECTION -->
             <section class="culinary-collection">
-                <h3>CULINARY COLLECTION</h3>
-                <p>Aliquam erat volutpat. Ut quis ligula a magna blandit finibus. Suspendisse maximus lacus non nunc lacinia lobortis.</p>
+                <div class="title">
+                    <h3>CULINARY COLLECTION</h3>
+                    <p>Aliquam erat volutpat. Ut quis ligula a magna blandit finibus. Suspendisse maximus lacus non nunc lacinia lobortis.</p>
+                </div>
                 <ul class="types">
                     <li class="cards" v-for="card in culinaryCollection">
                         <a :href="card.href"><img :src="card.img_src" :alt="card.title"></a>
@@ -141,11 +146,11 @@
                     <div class="main">
                         <div class="bigBanner">
                             <div class="photo">
-                                <a href="https://avada.theme-fusion.com/food/featured/food-corner-top-japanese-restaurants-for-sushi/" class="layover">
+                                <a :href="farmToTableBigBanner.href" class="layover">
                                     <i class="fas fa-link"></i>
-                                    <h4>Food Corner: Top Japanese Restaurants for Sushi</h4>
+                                    <h4>{{farmToTableBigBanner.title}}</h4>
                                 </a>
-                                <img src="img/single-post-img3-600x395.jpg" alt="Food Corner: Top Japanese Restaurants for Sushi">
+                                <img :src="farmToTableBigBanner.img_src" :alt="farmToTableBigBanner.title">
                             </div>
                             <div class="text">
                                 <a href="https://avada.theme-fusion.com/food/featured/food-corner-top-japanese-restaurants-for-sushi/"><h3>Food Corner: Top Japanese Restaurants for Sushi</h3></a>
@@ -179,9 +184,9 @@
                             <h3>VIEW OUR LATEST RECIPES</h3>
                         </a>
                         <div class="city-guide">
-                            <a href="https://avada.theme-fusion.com/food/places/singapore/">
-                                <img src="img/singapore-featured-image-400x263.jpg" alt="">
-                            <span>City Guide: Singapore</span>
+                            <a :href="cityGuideBanner.href">
+                                <img :src="cityGuideBanner.img_src" alt="">
+                            <span>{{cityGuideBanner.title}}</span>
                             </a>
                             <a class="allCities" href="https://avada.theme-fusion.com/food/places/"><i class="fas fa-globe-americas"></i>VIEW ALL CITY GUIDES</a>
                         </div>
@@ -202,12 +207,12 @@
                             </ul>
                         </div>
                         <div class="category">
-                            <span>Popular</span>
-                            <span>Recent</span>
+                            <span :class="activeButton == 0 ? 'active' : '' " @click="changeCategory(asidePopularLinks, 0)">Popular</span>
+                            <span :class="activeButton == 1 ? 'active' : '' " @click="changeCategory(asideRecentLinks, 1)">Recent</span>
                         </div>
-                        <div class="bannerLinks">
+                        <div class="bannerLinks" :class="activeButton == 0 ? 'animate_animated' : 'animate_animated2' ">
                             <ul>
-                                <li v-for="link in asideLinks">
+                                <li v-for="link in activeAsideLinks">
                                     <a :href="link.href">
                                         <img :src="link.img_src" :alt="link.title">
                                         <div class="info">
@@ -275,7 +280,7 @@
         <footer>
             <div class="top">
                 <div class="logo">
-                    <img src="img/avada-food-logo-mob-2x.png" alt="">
+                    <img :src="footerLogo" alt="Logo">
                     <ul>
                         <li v-for="icon in socialIcons">
                             <a :href="icon.href"><i :class="icon.style"></i></a>

@@ -1,0 +1,53 @@
+section.popular-recipes {
+    .images {
+        h3 {
+            @include titleText;
+            margin-top: 25px;
+            transition: all .5s;
+            &:hover {
+                color: $orangeBrand;
+            }
+        }
+        padding: 60px 0;
+        display: flex;
+        justify-content: space-between;
+        & > * {
+            max-width: 600px;
+        }
+        .bigBanner {
+            @include bigBannerStyle;
+            p {
+                padding-right: 20px;
+                margin-bottom: 5px;
+            }
+            span {
+                a {
+                    @include commonText;
+                    transition: all .5s;
+                    font-size: 15px;
+                        &:hover {
+                        color: $orangeBrand;
+                    }
+                }
+            }
+            .btn {
+                @include buttonsStyle;
+                font-size: 14px;
+                padding: 10px 20px;
+            }
+        }
+        .smallBanner {
+            margin-left: 45px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-start;
+            & > * {
+                width: 275px;
+            }
+            img {
+                height: 175px;
+            }
+        }
+    }  
+}

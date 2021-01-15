@@ -17,6 +17,21 @@ ul {
   list-style: none;
 }
 
+.title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.title h3 {
+  font-size: 21px;
+  font-weight: 600;
+}
+.title p {
+  font-size: 18px;
+  width: 600px;
+}
+
 .layover {
   padding: 25px;
   position: absolute;
@@ -52,6 +67,10 @@ ul {
   font-weight: 500;
   font-size: 18px;
   line-height: 27px;
+}
+
+.active {
+  background-color: white;
 }
 
 .photo {
@@ -120,6 +139,33 @@ img {
   text-align: left;
 }
 
+.animate_animated {
+  -webkit-animation: fadeIn 1s;
+          animation: fadeIn 1s;
+}
+
+.animate_animated2 {
+  -webkit-animation: fade 1s;
+          animation: fade 1s;
+}
+
+@-webkit-keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 header {
   background-color: white;
   padding: 0 10%;
@@ -127,6 +173,7 @@ header {
 header .top {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 10px 0;
 }
 header .top .download {
@@ -291,7 +338,7 @@ nav ul li a {
   font-weight: 600;
   font-family: "Catamaran", sans-serif;
   color: #383b39;
-  margin: 0 30px;
+  margin: 0 35px;
   position: relative;
   transition: all 0.3s;
 }
@@ -323,7 +370,8 @@ nav i {
   font-size: 23px;
   font-weight: 500;
   text-align: center;
-  padding: 60px 0;
+  padding-top: 60px;
+  padding-bottom: 40px;
   border-radius: 8px;
   position: relative;
 }
@@ -364,16 +412,22 @@ main {
   padding: 0 10%;
   text-align: center;
 }
-main section.foodie-journal {
+main p {
+  font-size: 18px;
+}
+
+section.foodie-journal {
   background-color: white;
   position: relative;
   top: -75px;
 }
-main section.foodie-journal > h3 {
+section.foodie-journal > h3 {
+  font-size: 21px;
+  font-weight: 600;
   padding: 30px 0;
   position: relative;
 }
-main section.foodie-journal > h3::before {
+section.foodie-journal > h3::before {
   content: "";
   position: absolute;
   bottom: 0;
@@ -382,7 +436,7 @@ main section.foodie-journal > h3::before {
   border-top: 1px dotted #bcbcbd;
   right: 40px;
 }
-main section.foodie-journal > h3::after {
+section.foodie-journal > h3::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -391,18 +445,19 @@ main section.foodie-journal > h3::after {
   border-top: 1px dotted #bcbcbd;
   left: 40px;
 }
-main section.foodie-journal ul {
+section.foodie-journal ul {
   padding: 0 40px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin-bottom: 50px;
 }
-main section.foodie-journal ul li {
+section.foodie-journal ul li {
   width: 345px;
   position: relative;
   margin-bottom: 50px;
 }
-main section.foodie-journal ul li h3 {
+section.foodie-journal ul li h3 {
   font-family: "Vidaloka", sans-serif;
   color: #272628;
   font-size: 23px;
@@ -412,15 +467,16 @@ main section.foodie-journal ul li h3 {
   margin-bottom: 5px;
   padding: 0 15px;
 }
-main section.foodie-journal ul li h3:hover {
+section.foodie-journal ul li h3:hover {
   color: #FC7625;
 }
-main section.popular-recipes .images {
+
+section.popular-recipes .images {
   padding: 60px 0;
   display: flex;
   justify-content: space-between;
 }
-main section.popular-recipes .images h3 {
+section.popular-recipes .images h3 {
   font-family: "Vidaloka", sans-serif;
   color: #272628;
   font-size: 23px;
@@ -428,39 +484,38 @@ main section.popular-recipes .images h3 {
   margin-top: 25px;
   transition: all 0.5s;
 }
-main section.popular-recipes .images h3:hover {
+section.popular-recipes .images h3:hover {
   color: #FC7625;
 }
-main section.popular-recipes .images > * {
+section.popular-recipes .images > * {
   max-width: 600px;
 }
-main section.popular-recipes .images .bigBanner {
+section.popular-recipes .images .bigBanner {
   background-color: white;
   padding-bottom: 40px;
 }
-main section.popular-recipes .images .bigBanner .text {
+section.popular-recipes .images .bigBanner .text {
   padding: 10px 30px;
 }
-main section.popular-recipes .images .bigBanner .text p {
+section.popular-recipes .images .bigBanner .text p {
   padding-top: 25px;
   margin: 25px 0;
   border-top: 1px dotted #bcbcbd;
 }
-main section.popular-recipes .images .bigBanner p {
-  font-size: 18px;
+section.popular-recipes .images .bigBanner p {
   padding-right: 20px;
   margin-bottom: 5px;
 }
-main section.popular-recipes .images .bigBanner span a {
+section.popular-recipes .images .bigBanner span a {
   font-family: "Catamaran", sans-serif;
   color: #383b39;
   transition: all 0.5s;
   font-size: 15px;
 }
-main section.popular-recipes .images .bigBanner span a:hover {
+section.popular-recipes .images .bigBanner span a:hover {
   color: #FC7625;
 }
-main section.popular-recipes .images .bigBanner .btn {
+section.popular-recipes .images .bigBanner .btn {
   border-radius: 2px;
   background-color: #FC7625;
   color: white;
@@ -469,81 +524,87 @@ main section.popular-recipes .images .bigBanner .btn {
   font-size: 14px;
   padding: 10px 20px;
 }
-main section.popular-recipes .images .bigBanner .btn:hover {
+section.popular-recipes .images .bigBanner .btn:hover {
   background-color: #f55e03;
 }
-main section.popular-recipes .images .smallBanner {
+section.popular-recipes .images .smallBanner {
   margin-left: 45px;
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
   justify-content: space-between;
+  align-items: flex-start;
 }
-main section.popular-recipes .images .smallBanner > * {
+section.popular-recipes .images .smallBanner > * {
   width: 275px;
 }
-main section.popular-recipes .images .smallBanner img {
+section.popular-recipes .images .smallBanner img {
   height: 175px;
 }
-main section.culinary-collection .types {
+
+section.culinary-collection .types {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
   height: 500px;
   padding: 30px 0;
 }
-main section.culinary-collection .types .cards {
+section.culinary-collection .types .cards {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   width: 264px;
   height: 170px;
   background-color: white;
-  display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
   font-size: 14px;
   padding: 10px;
 }
-main section.culinary-collection .types .cards img {
+section.culinary-collection .types .cards img {
   width: 96px;
   height: 96px;
   transition: all 1s;
 }
-main section.culinary-collection .types .cards img:hover {
+section.culinary-collection .types .cards img:hover {
   width: 106px;
   height: 106px;
   cursor: pointer;
 }
-main section.culinary-collection .types .cards a:last-child {
+section.culinary-collection .types .cards a:last-child {
   width: 100%;
   text-transform: uppercase;
   font-weight: 500;
   padding: 10px 0;
   transition: all 0.3s;
 }
-main section.culinary-collection .types .cards a:last-child:hover {
+section.culinary-collection .types .cards a:last-child:hover {
   border-radius: 2px;
   background-color: #FC7625;
   color: white;
   font-family: "Catamaran", sans-serif;
   transition: all 0.3s;
 }
-main section.culinary-collection .types .cards a:last-child:hover:hover {
+section.culinary-collection .types .cards a:last-child:hover:hover {
   background-color: #f55e03;
 }
-main section.farm-to-table {
+
+section.farm-to-table {
   padding-bottom: 100px;
 }
-main section.farm-to-table .top {
+section.farm-to-table .top {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding-bottom: 50px;
 }
-main section.farm-to-table .top .text {
+section.farm-to-table .top .text {
   text-align: left;
   max-width: 525px;
 }
-main section.farm-to-table .top > a {
+section.farm-to-table .top .text h3 {
+  font-size: 21px;
+}
+section.farm-to-table .top > a {
   border-radius: 2px;
   background-color: #FC7625;
   color: white;
@@ -552,32 +613,32 @@ main section.farm-to-table .top > a {
   padding: 10px 25px;
   font-size: 14px;
 }
-main section.farm-to-table .top > a:hover {
+section.farm-to-table .top > a:hover {
   background-color: #f55e03;
 }
-main section.farm-to-table .top > a i {
+section.farm-to-table .top > a i {
   margin-left: 5px;
 }
-main section.farm-to-table .central {
+section.farm-to-table .central {
   display: flex;
   justify-content: space-between;
 }
-main section.farm-to-table .central .main {
+section.farm-to-table .central .main {
   width: 768px;
 }
-main section.farm-to-table .central .main .bigBanner {
+section.farm-to-table .central .main .bigBanner {
   background-color: white;
   padding-bottom: 40px;
 }
-main section.farm-to-table .central .main .bigBanner .text {
+section.farm-to-table .central .main .bigBanner .text {
   padding: 10px 30px;
 }
-main section.farm-to-table .central .main .bigBanner .text p {
+section.farm-to-table .central .main .bigBanner .text p {
   padding-top: 25px;
   margin: 25px 0;
   border-top: 1px dotted #bcbcbd;
 }
-main section.farm-to-table .central .main .bigBanner h3 {
+section.farm-to-table .central .main .bigBanner h3 {
   font-family: "Vidaloka", sans-serif;
   color: #272628;
   font-size: 23px;
@@ -586,47 +647,48 @@ main section.farm-to-table .central .main .bigBanner h3 {
   transition: all 0.5s;
   margin-bottom: 5px;
 }
-main section.farm-to-table .central .main .bigBanner h3:hover {
+section.farm-to-table .central .main .bigBanner h3:hover {
   color: #FC7625;
 }
-main section.farm-to-table .central .main .bigBanner a {
+section.farm-to-table .central .main .bigBanner a {
   font-size: 14px;
   font-family: "Catamaran", sans-serif;
   color: #383b39;
 }
-main section.farm-to-table .central .main .bigBanner i {
+section.farm-to-table .central .main .bigBanner i {
   vertical-align: middle;
 }
-main section.farm-to-table .central .main .bigBanner .left {
+section.farm-to-table .central .main .bigBanner .left {
   transition: all 0.5s;
 }
-main section.farm-to-table .central .main .bigBanner .left i {
+section.farm-to-table .central .main .bigBanner .left i {
   font-size: 10px;
 }
-main section.farm-to-table .central .main .bigBanner .left:hover {
+section.farm-to-table .central .main .bigBanner .left:hover {
   color: #FC7625;
 }
-main section.farm-to-table .central .main .bigBanner .right {
+section.farm-to-table .central .main .bigBanner .right {
   vertical-align: middle;
   float: right;
   transition: all 0.5s;
 }
-main section.farm-to-table .central .main .bigBanner .right:hover {
+section.farm-to-table .central .main .bigBanner .right:hover {
   color: #FC7625;
 }
-main section.farm-to-table .central .main .bottom {
+section.farm-to-table .central .main .bottom {
   margin-top: 20px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   flex-wrap: wrap;
 }
-main section.farm-to-table .central .main .bottom .smallBanner {
+section.farm-to-table .central .main .bottom .smallBanner {
   margin: 20px 0;
   width: 362px;
   background-color: white;
   padding-bottom: 25px;
 }
-main section.farm-to-table .central .main .bottom .smallBanner h3 {
+section.farm-to-table .central .main .bottom .smallBanner h3 {
   margin-top: 20px;
   font-family: "Vidaloka", sans-serif;
   color: #272628;
@@ -635,28 +697,28 @@ main section.farm-to-table .central .main .bottom .smallBanner h3 {
   padding: 0 20px;
   transition: all 0.5s;
 }
-main section.farm-to-table .central .main .bottom .smallBanner h3:hover {
+section.farm-to-table .central .main .bottom .smallBanner h3:hover {
   color: #FC7625;
 }
-main section.farm-to-table .central .main .more {
+section.farm-to-table .central .main .more {
   font-weight: 600;
   background-color: #ddd8d3;
   padding: 8px 0;
   font-size: 17px;
   cursor: pointer;
 }
-main section.farm-to-table .central .aside {
+section.farm-to-table .central .aside {
   width: 372px;
   text-align: left;
 }
-main section.farm-to-table .central .aside .recipe {
+section.farm-to-table .central .aside .recipe {
   background-image: url("../img/ad-bg.jpg");
   background-size: cover;
   background-position: center;
   height: 420px;
   display: flex;
 }
-main section.farm-to-table .central .aside .recipe h3 {
+section.farm-to-table .central .aside .recipe h3 {
   width: 110px;
   margin: auto;
   font-weight: 600;
@@ -664,11 +726,11 @@ main section.farm-to-table .central .aside .recipe h3 {
   font-family: "Catamaran", sans-serif;
   color: #383b39;
 }
-main section.farm-to-table .central .aside .city-guide {
+section.farm-to-table .central .aside .city-guide {
   margin: 40px 0;
   position: relative;
 }
-main section.farm-to-table .central .aside .city-guide .allCities {
+section.farm-to-table .central .aside .city-guide .allCities {
   display: block;
   text-align: center;
   font-size: 14px;
@@ -679,13 +741,13 @@ main section.farm-to-table .central .aside .city-guide .allCities {
   transition: all 0.3s;
   padding: 10px 0;
 }
-main section.farm-to-table .central .aside .city-guide .allCities:hover {
+section.farm-to-table .central .aside .city-guide .allCities:hover {
   background-color: #f55e03;
 }
-main section.farm-to-table .central .aside .city-guide .allCities i {
+section.farm-to-table .central .aside .city-guide .allCities i {
   padding: 0 5px;
 }
-main section.farm-to-table .central .aside .city-guide span {
+section.farm-to-table .central .aside .city-guide span {
   position: absolute;
   top: 50%;
   left: 0;
@@ -694,10 +756,10 @@ main section.farm-to-table .central .aside .city-guide span {
   color: white;
   font-size: 21px;
 }
-main section.farm-to-table .central .aside hr {
+section.farm-to-table .central .aside hr {
   color: #939697;
 }
-main section.farm-to-table .central .aside .search {
+section.farm-to-table .central .aside .search {
   margin-top: 40px;
   color: #939697;
   border-radius: 5px;
@@ -705,10 +767,10 @@ main section.farm-to-table .central .aside .search {
   background-color: white;
   padding: 10px 20px;
 }
-main section.farm-to-table .central .aside .search i {
+section.farm-to-table .central .aside .search i {
   cursor: pointer;
 }
-main section.farm-to-table .central .aside .search input {
+section.farm-to-table .central .aside .search input {
   border: none;
   outline: none;
   font-family: "Catamaran", sans-serif;
@@ -716,10 +778,10 @@ main section.farm-to-table .central .aside .search input {
   margin-left: 20px;
   font-size: 18px;
 }
-main section.farm-to-table .central .aside .social {
+section.farm-to-table .central .aside .social {
   margin-top: 40px;
 }
-main section.farm-to-table .central .aside .social h4 {
+section.farm-to-table .central .aside .social h4 {
   font-family: "Vidaloka", sans-serif;
   color: #272628;
   font-size: 23px;
@@ -727,12 +789,12 @@ main section.farm-to-table .central .aside .social h4 {
   color: #FC7625;
   font-size: 20px;
 }
-main section.farm-to-table .central .aside .social ul {
+section.farm-to-table .central .aside .social ul {
   display: flex;
   align-items: center;
   margin-top: 30px;
 }
-main section.farm-to-table .central .aside .social ul li {
+section.farm-to-table .central .aside .social ul li {
   width: 35px;
   height: 35px;
   border-radius: 5px;
@@ -741,18 +803,18 @@ main section.farm-to-table .central .aside .social ul li {
   line-height: 35px;
   margin-right: 10px;
 }
-main section.farm-to-table .central .aside .social ul li a {
+section.farm-to-table .central .aside .social ul li a {
   color: #6a6b6c;
   transition: all 0.3s;
 }
-main section.farm-to-table .central .aside .social ul li:hover a {
+section.farm-to-table .central .aside .social ul li:hover a {
   color: #838586;
 }
-main section.farm-to-table .central .aside .category {
+section.farm-to-table .central .aside .category {
   margin-top: 40px;
   display: flex;
 }
-main section.farm-to-table .central .aside .category span {
+section.farm-to-table .central .aside .category span {
   cursor: pointer;
   width: 50%;
   text-align: center;
@@ -765,126 +827,125 @@ main section.farm-to-table .central .aside .category span {
   border: 0.5px solid #adafb0;
   transition: all 0.5s;
 }
-main section.farm-to-table .central .aside .category span:first-child {
+section.farm-to-table .central .aside .category span:first-child {
   border-right: none;
+}
+section.farm-to-table .central .aside .category span:hover {
   background-color: white;
 }
-main section.farm-to-table .central .aside .category span:hover {
-  background-color: white;
-}
-main section.farm-to-table .central .aside .bannerLinks {
+section.farm-to-table .central .aside .bannerLinks {
   margin-top: 40px;
 }
-main section.farm-to-table .central .aside .bannerLinks a {
+section.farm-to-table .central .aside .bannerLinks a {
   display: flex;
   align-items: center;
   margin-bottom: 25px;
 }
-main section.farm-to-table .central .aside .bannerLinks a img {
+section.farm-to-table .central .aside .bannerLinks a img {
   width: 52px;
   height: 52px;
   border-radius: 50%;
   margin-right: 15px;
   vertical-align: middle;
 }
-main section.farm-to-table .central .aside .bannerLinks a .info {
+section.farm-to-table .central .aside .bannerLinks a .info {
   font-family: "Catamaran", sans-serif;
   color: #383b39;
 }
-main section.farm-to-table .central .aside .bannerLinks a .info h4 {
+section.farm-to-table .central .aside .bannerLinks a .info h4 {
   font-size: 17px;
   font-weight: 500;
   transition: all 0.5s;
 }
-main section.farm-to-table .central .aside .bannerLinks a .info h4:hover {
+section.farm-to-table .central .aside .bannerLinks a .info h4:hover {
   color: #FC7625;
 }
-main section.farm-to-table .central .aside .bannerLinks a .info span {
+section.farm-to-table .central .aside .bannerLinks a .info span {
   font-size: 14px;
 }
-main section.farm-to-table .central .aside .tweets {
+section.farm-to-table .central .aside .tweets {
   background-color: white;
   padding: 15px;
   border-radius: 5px;
   font-family: Arial, Helvetica, sans-serif;
 }
-main section.farm-to-table .central .aside .tweets a {
+section.farm-to-table .central .aside .tweets a {
   color: #2b7bb9;
 }
-main section.farm-to-table .central .aside .tweets .top {
+section.farm-to-table .central .aside .tweets .top {
   padding: 15px;
   padding-bottom: 0;
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
   font-size: 14px;
 }
-main section.farm-to-table .central .aside .tweets .top i {
+section.farm-to-table .central .aside .tweets .top i {
   color: #939697;
 }
-main section.farm-to-table .central .aside .tweets .top .title h3 {
+section.farm-to-table .central .aside .tweets .top .title h3 {
   display: inline-block;
   font-size: 21px;
   font-weight: 500;
   color: black;
 }
-main section.farm-to-table .central .aside .tweets .tweet-body {
+section.farm-to-table .central .aside .tweets .tweet-body {
   display: flex;
   padding: 15px;
 }
-main section.farm-to-table .central .aside .tweets .tweet-body:hover {
+section.farm-to-table .central .aside .tweets .tweet-body:hover {
   background-color: #f2f2f2;
   cursor: pointer;
 }
-main section.farm-to-table .central .aside .tweets .tweet-body img {
+section.farm-to-table .central .aside .tweets .tweet-body img {
   width: 32px;
   height: 32px;
 }
-main section.farm-to-table .central .aside .tweets .tweet-body .tweet {
+section.farm-to-table .central .aside .tweets .tweet-body .tweet {
   padding-left: 5px;
 }
-main section.farm-to-table .central .aside .tweets .tweet-body .tweet .user {
+section.farm-to-table .central .aside .tweets .tweet-body .tweet .user {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 280px;
 }
-main section.farm-to-table .central .aside .tweets .tweet-body .tweet .user h4 {
+section.farm-to-table .central .aside .tweets .tweet-body .tweet .user h4 {
   color: black;
 }
-main section.farm-to-table .central .aside .tweets .tweet-body .tweet .user i {
+section.farm-to-table .central .aside .tweets .tweet-body .tweet .user i {
   color: #e8e5e1;
 }
-main section.farm-to-table .central .aside .tweets .tweet-body .tweet:hover .fab.fa-twitter {
+section.farm-to-table .central .aside .tweets .tweet-body .tweet:hover .fab.fa-twitter {
   color: #1DA1F2;
 }
-main section.farm-to-table .central .aside .tweets .tweet-body .tweet p {
+section.farm-to-table .central .aside .tweets .tweet-body .tweet p {
   font-size: 14px;
   line-height: 20px;
   padding-right: 10px;
 }
-main section.farm-to-table .central .aside .tweets .tweet-body .tweet-img {
+section.farm-to-table .central .aside .tweets .tweet-body .tweet-img {
   width: 280px;
   height: 175px;
   border-radius: 5px;
   margin-top: 25px;
 }
-main section.farm-to-table .central .aside .tweets .tweet-body .icons {
+section.farm-to-table .central .aside .tweets .tweet-body .icons {
   margin-top: 10px;
   font-size: 14px;
   color: #939697;
 }
-main section.farm-to-table .central .aside .tweets .tweet-body .icons i {
+section.farm-to-table .central .aside .tweets .tweet-body .icons i {
   margin-right: 20px;
   transition: all 0.5s;
 }
-main section.farm-to-table .central .aside .tweets .tweet-body .icons i:first-child:hover {
+section.farm-to-table .central .aside .tweets .tweet-body .icons i:first-child:hover {
   color: red;
 }
-main section.farm-to-table .central .aside .tweets .tweet-body .icons i.fas.fa-external-link-alt:hover {
+section.farm-to-table .central .aside .tweets .tweet-body .icons i.fas.fa-external-link-alt:hover {
   color: #2b7bb9;
 }
-main section.farm-to-table .central .aside .tweets .tweet-body .icons span {
+section.farm-to-table .central .aside .tweets .tweet-body .icons span {
   float: right;
   font-size: 12px;
 }
@@ -925,9 +986,17 @@ section.subscribe form input {
   outline: none;
   font-family: "Catamaran", sans-serif;
   border-radius: 5px;
-  border: 1px solid #939697;
+  border: 2px solid #e8e5e1;
+  color: #e8e5e1;
   padding: 10px 20px;
   font-size: 18px;
+  transition: all 0.5s;
+}
+section.subscribe form input:hover {
+  border-color: #fdb58a;
+}
+section.subscribe form input:focus {
+  border-color: #FC7625;
 }
 section.subscribe form a {
   border-radius: 2px;

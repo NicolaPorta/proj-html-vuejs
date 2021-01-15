@@ -3,8 +3,7 @@ header {
     padding: $wrapper;
     // TOP
     .top {
-        display: flex;
-        justify-content: space-between;
+        @include commonDisplay;
         padding: 10px 0;
         .download {
             font-size: 12px;

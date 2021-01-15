@@ -72,3 +72,9 @@
         background-color: #383b39;
     }
 }
+
+@mixin commonDisplay {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

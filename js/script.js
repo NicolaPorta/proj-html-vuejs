@@ -2,14 +2,23 @@ var app = new Vue(
     {
         el: "#root",
         data: {
-            jumbotron:"",
-            headerLogo:"",
-            footerLogo:"",
+            activeButton: 0,
+            headerLogo:"https://avada.theme-fusion.com/food/",
+            footerLogo:"img/avada-food-logo-mob-2x.png",
             popularRecipesBigBanner:{
-
+                "img_src": "img/Yogurt-Nan-600x395.jpg",
+                "title": "Lunch Favourite with Salad, Naan And Beans",
+                "href": "https://avada.theme-fusion.com/food/recipes/lunch-favourite-with-salad-naan-and-beans/"
             },
             farmToTableBigBanner:{
-
+                "img_src": "img/single-post-img3-600x395.jpg",
+                "title": "Food Corner: Top Japanese Restaurants for Sushi",
+                "href": "https://avada.theme-fusion.com/food/featured/food-corner-top-japanese-restaurants-for-sushi/"
+            },
+            cityGuideBanner:{
+                "img_src": "img/singapore-featured-image-400x263.jpg",
+                "title": "City Guide: Singapore",
+                "href": "https://avada.theme-fusion.com/food/places/singapore/"
             },
             socialIcons: [
                 {
@@ -188,7 +197,7 @@ var app = new Vue(
                     "href": "https://avada.theme-fusion.com/food/featured/5-waterside-restaurants-in-istanbul-for-special-events/"
                 }
             ],
-            asideLinks: [
+            asidePopularLinks: [
                 {
                     "img_src": "img/single-post-img3-66x66.jpg",
                     "title": "Roundup: My New Favourite Recipes For Healthy Living",
@@ -197,8 +206,8 @@ var app = new Vue(
                 },
                 {
                     "img_src": "img/singapore-featured-image-66x66.jpg",
-                    "title": "Meal Prep: Korean Bibimbap with Kimchi",
-                    "href": "https://avada.theme-fusion.com/food/street-food/meal-prep-korean-bibimbap-with-kimchi/",
+                    "title": "City Guide: Singapore",
+                    "href": "https://avada.theme-fusion.com/food/places/singapore/",
                     "date": "March 25th, 2019"
                 },
                 {
@@ -208,6 +217,28 @@ var app = new Vue(
                     "date": "March 25th, 2019"
                 }
             ],
+            asideRecentLinks: [
+                {
+                    "img_src": "img/single-post-img3-66x66.jpg",
+                    "title": "Roundup: My New Favourite Recipes For Healthy Living",
+                    "href": "https://avada.theme-fusion.com/food/featured/roundup-my-new-favourite-recipes-for-healthy-living/",
+                    "date": "January 18th, 2020"
+                },
+                {
+                    "img_src": "img/fi-roundup-66x66.jpg",
+                    "title": "Why These Toasts with Tea are My New Favorite",
+                    "href": "https://avada.theme-fusion.com/food/featured/why-these-toasts-with-tea-are-my-new-favorite/",
+                    "date": "July 25th, 2020"
+                },
+                {
+                    "img_src": "img/fi-korean-food-66x66.jpg",
+                    "title": "Meal Prep: Korean Bibimbap with Kimchi",
+                    "href": "https://avada.theme-fusion.com/food/street-food/meal-prep-korean-bibimbap-with-kimchi/",
+                    "date": "December 25th, 2020"
+                },
+            ],
+            fade:"animate_animated",
+            activeAsideLinks:[],
             bottomImgBanner: [
                 {
                     "img_src": "img/Yogurt-Nan-400x263.jpg",
@@ -230,6 +261,15 @@ var app = new Vue(
                     "href": "https://avada.theme-fusion.com/food/recipes/ice-cream-heaven-with-vanilla-chocolate-and-pistachio/"
                 }
             ]
+        },
+        created: function() {
+            this.changeCategory(this.asidePopularLinks, 0);
+        },
+        methods: {
+            changeCategory: function(category, index) {
+                this.activeButton = index;
+                this.activeAsideLinks = category;
+            }
         }
         
     }
