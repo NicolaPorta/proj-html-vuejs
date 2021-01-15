@@ -87,6 +87,35 @@ nav {
     }
     i {
         margin-left: 30px;
+        position: relative;
+        & > div {
+            position: absolute;
+            top: 40px;
+            right: 0;
+            padding: 40px;
+            background-color: $backHeaderColor;
+            opacity: 0;
+            .navSearch {
+                align-items: center;
+                display: flex;
+                color: $socialIconsColor;
+                border-radius: 5px;
+                border: 1px solid $socialIconsColor;
+                background-color: $backHeaderColor;
+                padding: 10px 20px;
+                i {
+                    cursor: pointer;
+                    vertical-align: middle;
+                    margin: 0;
+                }
+                input {
+                    @include inputStyle;
+                    font-size: 18px;
+                    display: inline-block;
+                    margin-left: 15px;
+                }
+            }
+        }
     }
     
     

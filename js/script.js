@@ -2,6 +2,7 @@ var app = new Vue(
     {
         el: "#root",
         data: {
+            searchButton: "",
             fade: "",
             activeButton: 0,
             headerLogo:"https://avada.theme-fusion.com/food/",
@@ -282,7 +283,12 @@ var app = new Vue(
                     left: 0,
                     behavior: 'smooth'
                 });
+            },
+            search: function() {
                 console.log("ciao");
+                if (this.searchButton == "") {
+                    this.searchButton = "visible" ;
+                } else this.searchButton = "";
             }
         }    
     }

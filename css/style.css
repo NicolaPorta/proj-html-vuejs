@@ -114,7 +114,7 @@ img {
 .popup > * .price {
   font-size: 28px;
   font-weight: 700;
-  padding-bottom: 5px;
+  padding-bottom: 10px;
   color: #1ca142;
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -261,6 +261,10 @@ img {
 .price.animate_animated:hover {
   -webkit-animation: tada 1s;
           animation: tada 1s;
+}
+
+.visible {
+  opacity: 1;
 }
 
 header {
@@ -446,6 +450,37 @@ nav ul li:first-child a {
 }
 nav i {
   margin-left: 30px;
+  position: relative;
+}
+nav i > div {
+  position: absolute;
+  top: 40px;
+  right: 0;
+  padding: 40px;
+  background-color: white;
+  opacity: 0;
+}
+nav i > div .navSearch {
+  align-items: center;
+  display: flex;
+  color: #939697;
+  border-radius: 5px;
+  border: 1px solid #939697;
+  background-color: white;
+  padding: 10px 20px;
+}
+nav i > div .navSearch i {
+  cursor: pointer;
+  vertical-align: middle;
+  margin: 0;
+}
+nav i > div .navSearch input {
+  border: none;
+  outline: none;
+  font-family: "Catamaran", sans-serif;
+  font-size: 18px;
+  display: inline-block;
+  margin-left: 15px;
 }
 
 .jumbotron {

@@ -46,7 +46,14 @@
                     <a :href="links.href">{{links.title}}</a>
                 </li>
             </ul>
-            <i class="fas fa-search"></i>
+            <i class="fas fa-search" @click="search">
+                <div :class="searchButton">
+                    <div class="navSearch">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="Search">
+                    </div>
+                </div>  
+            </i>
         </nav>
         <!-- /NAV -->
     
