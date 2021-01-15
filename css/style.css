@@ -708,6 +708,8 @@ section.culinary-collection .types .cards a:last-child {
   font-weight: 500;
   padding: 10px 0;
   transition: all 0.3s;
+  font-family: "Catamaran", sans-serif;
+  color: #383b39;
 }
 section.culinary-collection .types .cards a:last-child:hover {
   border-radius: 2px;

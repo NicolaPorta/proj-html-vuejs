@@ -28,6 +28,7 @@ section.culinary-collection {
                 font-weight: 500;
                 padding: 10px 0;
                 transition: all .3s;
+                @include commonText;
                 &:hover {
                     @include buttonsStyle;
                 }
