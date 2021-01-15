@@ -256,7 +256,7 @@ img {
     top: 0;
   }
 }
-.animate_animated:hover {
+.price.animate_animated:hover {
   -webkit-animation: tada 1s;
           animation: tada 1s;
 }
@@ -950,13 +950,13 @@ section.farm-to-table .central .aside .category span {
   font-size: 20px;
   padding: 15px 0;
   border: 0.5px solid #d4d5d6;
-  transition: all 0.5s;
+  transition: all 0.3s;
 }
 section.farm-to-table .central .aside .category span:first-child {
   border-right: none;
 }
 section.farm-to-table .central .aside .category span:hover {
-  color: #FC7625;
+  background-color: white;
 }
 section.farm-to-table .central .aside .bannerLinks {
   margin-top: 40px;

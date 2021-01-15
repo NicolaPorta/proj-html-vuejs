@@ -191,10 +191,13 @@ section.farm-to-table {
                     font-size: 20px;
                     padding: 15px 0;
                     border: 0.5px solid lighten($socialIconsColor, 25%);
+                    transition: all .3s;
                     &:first-child {
                         border-right: none;
                     }
-                    @include hoverBrand; 
+                    &:hover {
+                        background-color: $backHeaderColor;
+                    }
                 }
             }
             .bannerLinks {
