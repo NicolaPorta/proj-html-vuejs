@@ -2,8 +2,7 @@ var app = new Vue(
     {
         el: "#root",
         data: {
-            fade: null,
-            fade2: null,
+            fade: "",
             activeButton: 0,
             headerLogo:"https://avada.theme-fusion.com/food/",
             footerLogo:"img/avada-food-logo-mob-2x.png",
@@ -276,10 +275,16 @@ var app = new Vue(
             },
             animationOut: function() {
                 this.fade = "fadeOut";
+            },
+            scrollUp: function() {
+                window.scrollTo({
+                    top: 0,
+                    left: 0,
+                    behavior: 'smooth'
+                });
+                console.log("ciao");
             }
-
-        }
-        
+        }    
     }
   );
   
