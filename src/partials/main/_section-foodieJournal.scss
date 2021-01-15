@@ -24,12 +24,9 @@ section.foodie-journal {
             h3 {
                 @include titleText;
                 margin-top: 25px;
-                transition: all .5s;
+                @include hoverBrand; 
                 margin-bottom: 5px;
                 padding: 0 15px;
-                &:hover {
-                    color: $orangeBrand;
-                }
             }
             width: 345px;
             position: relative;

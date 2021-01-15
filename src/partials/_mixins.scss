@@ -1,10 +1,10 @@
 @mixin commonText {
-    font-family: 'Catamaran', sans-serif;
+    font-family: $commonFont;
     color: #383b39;
 }
 
 @mixin titleText  {
-    font-family: 'Vidaloka', sans-serif;
+    font-family: $titleFont;
     color: #272628;
     font-size: 23px;
     font-weight: 500;
@@ -14,7 +14,7 @@
     border-radius: 2px;
     background-color: $orangeBrand;
     color: $backHeaderColor;
-    font-family: 'Catamaran', sans-serif;
+    font-family: $commonFont;
     transition: all 0.3s;
         &:hover {
             background-color: darken($orangeBrand, 8%);
@@ -46,7 +46,7 @@
 @mixin inputStyle {
     border: none;
     outline: none;
-    font-family: 'Catamaran', sans-serif;
+    font-family: $commonFont;
 }
 
 @mixin nameBanner {
@@ -77,4 +77,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+@mixin hoverBrand {
+    transition: all .5s;
+    &:hover {
+        color: $orangeBrand;
+    }
 }

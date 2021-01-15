@@ -3,10 +3,7 @@ section.popular-recipes {
         h3 {
             @include titleText;
             margin-top: 25px;
-            transition: all .5s;
-            &:hover {
-                color: $orangeBrand;
-            }
+            @include hoverBrand;
         }
         padding: 60px 0;
         display: flex;
@@ -23,11 +20,8 @@ section.popular-recipes {
             span {
                 a {
                     @include commonText;
-                    transition: all .5s;
+                    @include hoverBrand; 
                     font-size: 15px;
-                        &:hover {
-                        color: $orangeBrand;
-                    }
                 }
             }
             .btn {

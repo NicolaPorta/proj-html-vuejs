@@ -2,6 +2,8 @@ var app = new Vue(
     {
         el: "#root",
         data: {
+            fade: null,
+            fade2: null,
             activeButton: 0,
             headerLogo:"https://avada.theme-fusion.com/food/",
             footerLogo:"img/avada-food-logo-mob-2x.png",
@@ -237,7 +239,6 @@ var app = new Vue(
                     "date": "December 25th, 2020"
                 },
             ],
-            fade:"animate_animated",
             activeAsideLinks:[],
             bottomImgBanner: [
                 {
@@ -269,7 +270,14 @@ var app = new Vue(
             changeCategory: function(category, index) {
                 this.activeButton = index;
                 this.activeAsideLinks = category;
+            },
+            animationIn: function() {
+                this.fade = "fadeIn";
+            },
+            animationOut: function() {
+                this.fade = "fadeOut";
             }
+
         }
         
     }

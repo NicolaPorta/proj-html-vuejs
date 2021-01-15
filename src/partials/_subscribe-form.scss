@@ -28,7 +28,6 @@ section.subscribe {
             @include inputStyle;
             border-radius: 5px;
             border: 2px solid $mainColor;
-            color: $mainColor;
             padding: 10px 20px;
             font-size: 18px;
             transition: all .5s;
@@ -42,7 +41,7 @@ section.subscribe {
         a {
             @include buttonsStyle;
             padding: 10px 50px;
-            font-size: 14px;
+            font-size: 18px;
             margin-left: 20px;
         }
         .bottom {

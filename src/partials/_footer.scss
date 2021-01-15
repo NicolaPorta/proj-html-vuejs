@@ -71,10 +71,7 @@ footer {
                 display: flex;
                 a {
                     @include commonText;
-                    transition: all .5s;
-                    &:hover {
-                        color: $orangeBrand;
-                    }
+                    @include hoverBrand; 
                 }
             }
 

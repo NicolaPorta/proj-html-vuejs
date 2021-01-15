@@ -89,8 +89,12 @@ img {
   right: 15px;
 }
 .popup > * {
-  width: 60px;
-  height: 60px;
+  font-family: "Catamaran", sans-serif;
+  color: #383b39;
+  font-weight: 600;
+  overflow: hidden;
+  width: 65px;
+  height: 65px;
   background-color: white;
   box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
@@ -139,12 +143,12 @@ img {
   text-align: left;
 }
 
-.animate_animated {
+.bannerLinks.animate_animated {
   -webkit-animation: fadeIn 1s;
           animation: fadeIn 1s;
 }
 
-.animate_animated2 {
+.bannerLinks.animate_animated2 {
   -webkit-animation: fade 1s;
           animation: fade 1s;
 }
@@ -166,6 +170,97 @@ img {
     opacity: 1;
   }
 }
+.fadeIn {
+  -webkit-animation: fade-in 0.15s;
+          animation: fade-in 0.15s;
+  position: relative;
+}
+
+@-webkit-keyframes fade-in {
+  0% {
+    left: 0;
+    top: 0;
+  }
+  50% {
+    left: 50px;
+    top: 0;
+  }
+  51% {
+    left: -50px;
+    top: 0;
+  }
+  100% {
+    left: 0;
+    top: 0;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    left: 0;
+    top: 0;
+  }
+  50% {
+    left: 50px;
+    top: 0;
+  }
+  51% {
+    left: -50px;
+    top: 0;
+  }
+  100% {
+    left: 0;
+    top: 0;
+  }
+}
+.fadeOut {
+  -webkit-animation: fade-out 0.15s;
+          animation: fade-out 0.15s;
+  position: relative;
+}
+
+@-webkit-keyframes fade-out {
+  0% {
+    right: 0;
+    top: 0;
+  }
+  50% {
+    right: 50px;
+    top: 0;
+  }
+  51% {
+    right: -50px;
+    top: 0;
+  }
+  100% {
+    right: 0;
+    top: 0;
+  }
+}
+
+@keyframes fade-out {
+  0% {
+    right: 0;
+    top: 0;
+  }
+  50% {
+    right: 50px;
+    top: 0;
+  }
+  51% {
+    right: -50px;
+    top: 0;
+  }
+  100% {
+    right: 0;
+    top: 0;
+  }
+}
+.animate_animated:hover {
+  -webkit-animation: tada 1s;
+          animation: tada 1s;
+}
+
 header {
   background-color: white;
   padding: 0 10%;
@@ -661,11 +756,11 @@ section.farm-to-table .central .main .bigBanner i {
 section.farm-to-table .central .main .bigBanner .left {
   transition: all 0.5s;
 }
-section.farm-to-table .central .main .bigBanner .left i {
-  font-size: 10px;
-}
 section.farm-to-table .central .main .bigBanner .left:hover {
   color: #FC7625;
+}
+section.farm-to-table .central .main .bigBanner .left i {
+  font-size: 10px;
 }
 section.farm-to-table .central .main .bigBanner .right {
   vertical-align: middle;
@@ -795,13 +890,40 @@ section.farm-to-table .central .aside .social ul {
   margin-top: 30px;
 }
 section.farm-to-table .central .aside .social ul li {
+  position: relative;
   width: 35px;
   height: 35px;
   border-radius: 5px;
   border: 0.5px solid #adafb0;
+  background-color: #ddd8d3;
   text-align: center;
   line-height: 35px;
   margin-right: 10px;
+}
+section.farm-to-table .central .aside .social ul li div {
+  font-size: 12px;
+  background-color: #383b39;
+  color: white;
+  padding: 2px 5px;
+  border-radius: 3px;
+  position: absolute;
+  bottom: -24px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: all 0.3s;
+  opacity: 0;
+  bottom: -30px;
+  line-height: 20px;
+}
+section.farm-to-table .central .aside .social ul li div::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%) rotateZ(45deg);
+  height: 5px;
+  width: 5px;
+  background-color: #383b39;
 }
 section.farm-to-table .central .aside .social ul li a {
   color: #6a6b6c;
@@ -809,6 +931,9 @@ section.farm-to-table .central .aside .social ul li a {
 }
 section.farm-to-table .central .aside .social ul li:hover a {
   color: #838586;
+}
+section.farm-to-table .central .aside .social ul li:hover div {
+  opacity: 1;
 }
 section.farm-to-table .central .aside .category {
   margin-top: 40px;
@@ -824,14 +949,14 @@ section.farm-to-table .central .aside .category span {
   font-weight: 500;
   font-size: 20px;
   padding: 15px 0;
-  border: 0.5px solid #adafb0;
+  border: 0.5px solid #d4d5d6;
   transition: all 0.5s;
 }
 section.farm-to-table .central .aside .category span:first-child {
   border-right: none;
 }
 section.farm-to-table .central .aside .category span:hover {
-  background-color: white;
+  color: #FC7625;
 }
 section.farm-to-table .central .aside .bannerLinks {
   margin-top: 40px;
@@ -987,7 +1112,6 @@ section.subscribe form input {
   font-family: "Catamaran", sans-serif;
   border-radius: 5px;
   border: 2px solid #e8e5e1;
-  color: #e8e5e1;
   padding: 10px 20px;
   font-size: 18px;
   transition: all 0.5s;
@@ -1005,7 +1129,7 @@ section.subscribe form a {
   font-family: "Catamaran", sans-serif;
   transition: all 0.3s;
   padding: 10px 50px;
-  font-size: 14px;
+  font-size: 18px;
   margin-left: 20px;
 }
 section.subscribe form a:hover {

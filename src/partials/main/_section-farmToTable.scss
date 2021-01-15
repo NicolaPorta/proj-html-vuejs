@@ -29,11 +29,8 @@ section.farm-to-table {
                 h3 {
                     @include titleText;
                     margin-top: 40px;
-                    transition: all .5s;
+                    @include hoverBrand; 
                     margin-bottom: 5px;
-                    &:hover {
-                        color: $orangeBrand;
-                    }
                 }
                 a {
                     font-size: 14px;
@@ -43,21 +40,15 @@ section.farm-to-table {
                     vertical-align: middle;
                 }
                 .left {
-                    transition: all .5s;
+                    @include hoverBrand; 
                     i {
                         font-size: 10px;
-                    }
-                    &:hover {
-                        color: $orangeBrand;
                     }
                 }
                 .right {
                     vertical-align: middle;
                     float: right;
-                    transition: all .5s;
-                    &:hover {
-                        color: $orangeBrand;
-                    }
+                    @include hoverBrand; 
                 }
             }
             .bottom {
@@ -73,10 +64,7 @@ section.farm-to-table {
                         margin-top: 20px;
                         @include titleText;
                         padding: 0 20px;
-                        transition: all .5s;
-                        &:hover {
-                            color: $orangeBrand;
-                        }
+                        @include hoverBrand; 
                     }
                 }
             }
@@ -162,19 +150,31 @@ section.farm-to-table {
                     align-items: center;
                     margin-top: 30px;
                     li {
+                        position: relative;
                         width: 35px;
                         height: 35px;
                         border-radius: 5px;
                         border: 0.5px solid lighten($socialIconsColor, 10%);
+                        background-color: darken($mainColor, 5%);
                         text-align: center;
                         line-height: 35px;
                         margin-right: 10px;
+                        div {
+                            @include nameBanner;
+                            bottom: -30px;
+                            line-height: 20px;
+                        }
                         a {
                             color: #6a6b6c;
                             transition: all .3s;
                         }
-                        &:hover a {
+                        &:hover {
+                            a {
                             color: lighten(#6a6b6c, 10%);
+                            }
+                            div {
+                                opacity: 1;
+                            }
                         }
                     }
                        
@@ -190,14 +190,11 @@ section.farm-to-table {
                     @include titleText;
                     font-size: 20px;
                     padding: 15px 0;
-                    border: 0.5px solid lighten($socialIconsColor, 10%);
+                    border: 0.5px solid lighten($socialIconsColor, 25%);
                     &:first-child {
                         border-right: none;
                     }
-                    transition: all .5s;
-                    &:hover {
-                        background-color: $backHeaderColor;
-                    }
+                    @include hoverBrand; 
                 }
             }
             .bannerLinks {
@@ -218,10 +215,7 @@ section.farm-to-table {
                         h4 {
                             font-size: 17px;
                             font-weight: 500;
-                            transition: all .5s;
-                            &:hover {
-                                color: $orangeBrand;
-                            }
+                            @include hoverBrand; 
                         }
                         span {
                             font-size: 14px;
